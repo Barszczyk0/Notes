@@ -3,6 +3,7 @@ This lab is vulnerable to username enumeration and password brute-force attacks.
 [username.txt](https://portswigger.net/web-security/authentication/auth-lab-usernames) \
 [passwords.txt](https://portswigger.net/web-security/authentication/auth-lab-passwords) \
 To solve the lab, enumerate a valid username, brute-force this user's password, then access their account page.
+
 # Solution
 ## Username enumeration
 |![](Images/image.png)|
@@ -13,10 +14,12 @@ After enumerating usernamas there was one valid username -Response was a little 
 ![](Images/image1.png)
 |:--:| 
 | *Valid username - apple* |
+
 ## Password Brute-force
 |![](Images/image2.png)|
 |:--:| 
 | *Payload position* |
+
 |![](Images/image3.png)|
 |:--:| 
 | *Valid password for user apple - biteme* |
