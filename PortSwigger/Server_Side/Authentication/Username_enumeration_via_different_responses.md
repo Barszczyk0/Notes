@@ -8,12 +8,15 @@ To solve the lab, enumerate a valid username, brute-force this user's password, 
 |![](Images/image.png)|
 |:--:| 
 | *Payload position* |
+
 After enumerating usernamas there was one valid username -Response was a little bit longer. \
-![Valid username - apple](Images/image1.png)
+![](Images/image1.png)
+|:--:| 
+| *Valid username - apple* |
 ## Password Brute-force
-![](Images/image2.png)
+|![](Images/image2.png)|
 |:--:| 
 | *Payload position* |
-![](Images/image3.png)
+|![](Images/image3.png)|
 |:--:| 
 | *Valid password for user apple - biteme* |
