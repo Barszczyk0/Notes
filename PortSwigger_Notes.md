@@ -20,7 +20,7 @@
 - SQL injection with filter bypass via XML encoding
 
 ## Authentication
-- Username enumeration via different responses
+- [Username enumeration via different responses](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_different_responses.md)
 - 2FA simple bypass
 - Password reset broken logic
 - Username enumeration via subtly different responses
