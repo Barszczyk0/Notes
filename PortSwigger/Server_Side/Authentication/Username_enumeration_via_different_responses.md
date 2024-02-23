@@ -5,12 +5,15 @@ This lab is vulnerable to username enumeration and password brute-force attacks.
 To solve the lab, enumerate a valid username, brute-force this user's password, then access their account page.
 # Solution
 ## Username enumeration
-![](Images/image.png)
-*Payload position*
+|![](Images/image.png)|
+|:--:| 
+| *Payload position* |
 After enumerating usernamas there was one valid username -Response was a little bit longer. \
 ![Valid username - apple](Images/image1.png)
 ## Password Brute-force
 ![](Images/image2.png)
-*Payload position*
+|:--:| 
+| *Payload position* |
 ![](Images/image3.png)
-*Valid password for user apple - biteme*
+|:--:| 
+| *Valid password for user apple - biteme* |
