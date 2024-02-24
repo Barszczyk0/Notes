@@ -21,10 +21,10 @@
 
 ## Authentication
 - [Username enumeration via different responses](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_different_responses.md)
-- 2FA simple bypass
-- Password reset broken logic
-- Username enumeration via subtly different responses
-- Username enumeration via response timing
+- [2FA simple bypass](/PortSwigger/Server_Side/Authentication/2FA_simple_bypass.md)
+- [Password reset broken logic](/PortSwigger/Server_Side/Authentication/Password_reset_broken_logic.md)
+- [Username enumeration via subtly different responses](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_subtly_different_responses.md)
+- [Username enumeration via response timing](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_response_timing.md)
 - Broken brute-force protection, IP block
 - Username enumeration via account lock
 
