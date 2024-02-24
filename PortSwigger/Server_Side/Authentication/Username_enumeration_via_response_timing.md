@@ -7,7 +7,7 @@ This lab is vulnerable to username enumeration using its response times. To solv
 
 # Solution
 In this lab user IP will be blocked if you he makes too many invalid login attempts.
-|![](Images/image13.png)|
+|![](Images/image-13.png)|
 |:--:| 
 | *Blocked login* |
 
