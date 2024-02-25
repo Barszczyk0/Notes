@@ -29,12 +29,12 @@
 - [Username enumeration via account lock](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_account_lock.md)
 
 ## Path Traversal
-- File path traversal, simple case
-- File path traversal, traversal sequences blocked with absolute path bypass
-- File path traversal, traversal sequences stripped non-recursively
-- File path traversal, traversal sequences stripped with superfluous URL-decode
-- File path traversal, validation of start of path
-- File path traversal, validation of file extension with null byte bypass
+- [File path traversal, simple case](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_simple_case.md)
+- [File path traversal, traversal sequences blocked with absolute path bypass](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_traversal_sequences_blocked_with_absolute_path_bypass.md)
+- [File path traversal, traversal sequences stripped non-recursively](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_traversal_sequences_stripped_non-recursively.md)
+- [File path traversal, traversal sequences stripped with superfluous URL-decode](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_traversal_sequences_stripped_with_superfluous_URL-decode.md)
+- [File path traversal, validation of start of path](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_start_of-path.md)
+- [File path traversal, validation of file extension with null byte bypass](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_file_extension_with_null_byte_bypass.md)
 
 ## OS command injection
 - OS command injection, simple case
