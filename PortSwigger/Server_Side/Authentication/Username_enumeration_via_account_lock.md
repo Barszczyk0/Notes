@@ -6,7 +6,7 @@ This lab is vulnerable to username enumeration. It uses account locking, but thi
 
 # Solution
 In this application if the username is valid account will be blocked - the response will be differennt
-## Usename enumeration
+## Username enumeration
 |![](Images/image-26.png)|
 |:--:| 
 | *Payloads positions* |
