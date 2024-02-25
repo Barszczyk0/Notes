@@ -1,18 +1,18 @@
 # Server-Side topics
 ## SQL Injection
-- SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
-- SQL injection vulnerability allowing login bypass
-- SQL injection attack, querying the database type and version on Oracle
-- SQL injection attack, querying the database type and version on MySQL and Microsoft
-- SQL injection attack, listing the database contents on non-Oracle databases
-- SQL injection attack, listing the database contents on Oracle
-- SQL injection UNION attack, determining the number of columns returned by the query
-- SQL injection UNION attack, finding a column containing text
-- SQL injection UNION attack, retrieving data from other tables
-- SQL injection UNION attack, retrieving multiple values in a single column
-- Blind SQL injection with conditional responses
-- Blind SQL injection with conditional errors
-- Visible error-based SQL injection
+- [SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](/PortSwigger/Server_Side/SQL_injection/SQL_injection_vulnerability_in_WHERE_clause_allowing_retrieval_of_hidden_data.md)
+- [SQL injection vulnerability allowing login bypass](/PortSwigger/Server_Side/SQL_injection/SQL_injection_vulnerability_allowing_login_bypass.md)
+- [SQL injection attack, querying the database type and version on Oracle](/PortSwigger/Server_Side/SQL_injection/SQL_injection_attack,_querying_the_database_type_and_version_on_Oracle.md)
+- [SQL injection attack, querying the database type and version on MySQL and Microsoft](/PortSwigger/Server_Side/SQL_injection/SQL_injection_attack,_querying_the_database_type_and_version_on_MySQL_and_Microsoft.md)
+- [SQL injection attack, listing the database contents on non-Oracle databases](/PortSwigger/Server_Side/SQL_injection/SQL_injection_attack,_listing_the_database_contents_on_non-Oracle_databases.md)
+- [SQL injection attack, listing the database contents on Oracle](/PortSwigger/Server_Side/SQL_injection/SQL_injection_attack,_listing_the_database_contents_on_Oracle.md)
+- [SQL injection UNION attack, determining the number of columns returned by the query](/PortSwigger/Server_Side/SQL_injection/SQL_injection_UNION_attack,_determining_the_number_of_columns_returned_by_the_query.md)
+- [SQL injection UNION attack, finding a column containing text](/PortSwigger/Server_Side/SQL_injection/SQL_injection_UNION_attack,_finding_a_column_containing_text.md)
+- [SQL injection UNION attack, retrieving data from other tables](/PortSwigger/Server_Side/SQL_injection/SQL_injection_UNION_attack,_retrieving_data_from_other_tables.md)
+- [SQL injection UNION attack, retrieving multiple values in a single column](/PortSwigger/Server_Side/SQL_injection/SQL_injection_UNION_attack,_retrieving_multiple_values_in_a_single_column.md)
+- [Blind SQL injection with conditional responses](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_conditional_responses.md)
+- [Blind SQL injection with conditional errors](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_conditional_errors.md)
+- [Visible error-based SQL injection](/PortSwigger/Server_Side/SQL_injection/Visible_error-based_SQL_injection.md)
 - Blind SQL injection with time delays
 - Blind SQL injection with time delays and information retrieval
 - Blind SQL injection with out-of-band interaction
