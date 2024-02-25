@@ -37,11 +37,11 @@
 - [File path traversal, validation of file extension with null byte bypass](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_file_extension_with_null_byte_bypass.md)
 
 ## OS command injection
-- OS command injection, simple case
-- Blind OS command injection with time delays
-- Blind OS command injection with output redirection
-- Blind OS command injection with out-of-band interaction
-- Blind OS command injection with out-of-band data exfiltration
+- [OS command injection, simple case](/PortSwigger/Server_Side/OS_command_injection/OS_command_injection,_simple_case.md)
+- [Blind OS command injection with time delays](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_time_delays.md)
+- [Blind OS command injection with output redirection](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_output_redirection.md)
+- [Blind OS command injection with out-of-band interaction](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_interaction.md)
+- [Blind OS command injection with out-of-band data exfiltration](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_data_exfiltration.md)
 
 ## Business logic vulnerabilities
 ## Information disclosure vulnerabilities
