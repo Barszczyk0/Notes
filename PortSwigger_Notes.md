@@ -25,8 +25,8 @@
 - [Password reset broken logic](/PortSwigger/Server_Side/Authentication/Password_reset_broken_logic.md)
 - [Username enumeration via subtly different responses](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_subtly_different_responses.md)
 - [Username enumeration via response timing](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_response_timing.md)
-- Broken brute-force protection, IP block
-- Username enumeration via account lock
+- [Broken brute-force protection, IP block](/PortSwigger/Server_Side/Authentication/Broken_brute-force_protection,_IP_block.md)
+- [Username enumeration via account lock](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_account_lock.md)
 
 ## Path Traversal
 - File path traversal, simple case
