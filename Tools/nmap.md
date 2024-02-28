@@ -86,14 +86,13 @@ Port is open or closed
 ```
 
 ## Window Scan
+Similar to ACk SCAN. Window Scan examines the TCP Window field of the RST packets returned. On some systems, open ports use a positive window size (even for RST packets) while closed ones have a zero window.
 ```
 nmap -sW <IP>
 
 attacker (ACK) --> target
 attacker <-- (RST) target
 Port is open or closed
-
-Similar to ACk SCAN. Window Scan examines the TCP Window field of the RST packets returned. On some systems, open ports use a positive window size (even for RST packets) while closed ones have a zero window.
 ```
 
 # UDP Scans
@@ -169,7 +168,7 @@ nmap -sS --source-port <PORT_NUMBER> <IP>
 --badsum
 --scanflags URG/ACK/PSH/RST/SYN/FIN
 --ttl <NUMBER>
---script=vuln --script-args http.useragent="<USER AGENT HERE>"
+--script=vuln --script-args http.useragent="<USER AGENT>"
 --spoof-mac <SPOOFED_MAC>
--D 10.10.0.1,10.10.0.2,ME
+-D <IP1>,<IP2>,ME
 ```

@@ -2,3 +2,6 @@
 - [gdb](/Tools/gdb.md)
 - [pwn_shellcraft](/Tools/pwn_shellcraft.md)
 - [mona](/Tools/mona.md)
+- [nmap](/Tools/nmap.md)
+- [nc](/Tools/nc.md)
+- [socat](/Tools/socat.md)
