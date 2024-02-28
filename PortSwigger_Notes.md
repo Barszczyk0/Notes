@@ -13,11 +13,11 @@
 - [Blind SQL injection with conditional responses](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_conditional_responses.md)
 - [Blind SQL injection with conditional errors](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_conditional_errors.md)
 - [Visible error-based SQL injection](/PortSwigger/Server_Side/SQL_injection/Visible_error-based_SQL_injection.md)
-- Blind SQL injection with time delays
-- Blind SQL injection with time delays and information retrieval
-- Blind SQL injection with out-of-band interaction
-- Blind SQL injection with out-of-band data exfiltration
-- SQL injection with filter bypass via XML encoding
+- [Blind SQL injection with time delays](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_time_delays.md)
+- [Blind SQL injection with time delays and information retrieval](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_time_delays_and_information_retrieval.md)
+- [Blind SQL injection with out-of-band interaction](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_out-of-band_interaction.md)
+- [Blind SQL injection with out-of-band data exfiltration](/PortSwigger/Server_Side/SQL_injection/Blind_SQL_injection_with_out-of-band_data_exfiltration.md)
+- [SQL injection with filter bypass via XML encoding](/PortSwigger/Server_Side/SQL_injection/SQL_injection_with_filter_bypass_via_XML_encoding.md)
 
 ## Authentication
 - [Username enumeration via different responses](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_different_responses.md)
