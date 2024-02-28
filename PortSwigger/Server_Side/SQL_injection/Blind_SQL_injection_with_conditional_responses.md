@@ -11,7 +11,7 @@ To solve the lab, log in as the administrator user.
 # Solution
 ![](Images/image.png)
 
-Expected query structure concerning TrackingId:\
+Expected query structure concerning TrackingId:
 ```
 SELECT TrackingId FROM TrackingIdTable WHERE TrackingId='8e4W3X5FoxstfJs7'
 ```
