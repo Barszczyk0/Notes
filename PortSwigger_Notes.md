@@ -55,6 +55,19 @@
 
 # Client-Side topics
 ## Cross-site scripting (XXS)
+- [Reflected XSS into HTML context with nothing encoded](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_nothing_encoded.md)
+- [Stored XSS into HTML context with nothing encoded](/PortSwigger/Client_Side/XSS/Stored_XSS_into_HTML_context_with_nothing_encoded.md)
+- [DOM XSS in document.write sink using source location.search](/PortSwigger/Client_Side/XSS/DOM_XSS_in_document.write_sink_using_source_location.search.md)
+- [DOM XSS in innerHTML sink using source location.search](/PortSwigger/Client_Side/XSS/DOM_XSS_in_innerHTML_sink_using_source_location.search.md)
+- [DOM XSS in jQuery anchor href attribute sink using location.search source](/PortSwigger/Client_Side/XSS/DOM_XSS_in_jQuery_anchor_href_attribute_sink_using_location.search_source.md)
+- [DOM XSS in jQuery selector sink using a hashchange event](/PortSwigger/Client_Side/XSS/DOM_XSS_in_jQuery_selector_sink_using_a_hashchange_event.md)
+- [Reflected XSS into attribute with angle brackets HTML-encoded](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_attribute_with_angle_brackets_HTML-encoded.md)
+- [Stored XSS into anchor href attribute with double quotes HTML-encoded](/PortSwigger/Client_Side/XSS/Stored_XSS_into_anchor_href_attribute_with_double_quotes_HTML-encoded.md)
+- [Reflected XSS into a JavaScript string with angle brackets HTML encoded](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_a_JavaScript_string_with_angle_brackets_HTML_encoded.md)
+- [DOM XSS in document.write sink using source location.search inside a select element](/PortSwigger/Client_Side/XSS/DOM_XSS_in_document.write_sink_using_source_location.search_inside_a_select_element.md)
+- [DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded](/PortSwigger/Client_Side/XSS/DOM_XSS_in_AngularJS_expression_with_angle_brackets_and_double_quotes_HTML-encoded.md)
+- [Reflected DOM XSS](/PortSwigger/Client_Side/XSS/Reflected_DOM_XSS.md)
+
 ## Cross-site request forgery (CSRF)
 ## Cross-origin resource sharing (CORS)
 ## Clickjacking
