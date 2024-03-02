@@ -67,6 +67,11 @@
 - [DOM XSS in document.write sink using source location.search inside a select element](/PortSwigger/Client_Side/XSS/DOM_XSS_in_document.write_sink_using_source_location.search_inside_a_select_element.md)
 - [DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded](/PortSwigger/Client_Side/XSS/DOM_XSS_in_AngularJS_expression_with_angle_brackets_and_double_quotes_HTML-encoded.md)
 - [Reflected DOM XSS](/PortSwigger/Client_Side/XSS/Reflected_DOM_XSS.md)
+- [Stored DOM XSS](/PortSwigger/Client_Side/XSS/Stored_DOM_XSS.md)
+- [Reflected XSS into HTML context with most tags and attributes blocked](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_most_tags_and_attributes_blocked.md)
+- [Reflected XSS into HTML context with all tags blocked except custom ones](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_all_tags_blocked_except_custom_ones.md)
+- [Reflected XSS with some SVG markup allowed](/PortSwigger/Client_Side/XSS/Reflected_XSS_with_some_SVG_markup_allowed.md)
+
 
 ## Cross-site request forgery (CSRF)
 ## Cross-origin resource sharing (CORS)

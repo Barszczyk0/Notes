@@ -13,7 +13,7 @@ Payload: `<img src=0 onerror="alert()">` returns `"Tag is not allowed"`:
 
 
 ## Brute forcing allowed tags
-[Tags and Events used for brute forcing (Copy tags to clipboard)](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
+[Tags and Events used for brute forcing (Copy tags to clipboard)](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) \
 Payload: 
 ```
 /?search=<§§>
@@ -36,7 +36,7 @@ Both tags: `<svg>` and `<animatetransform>` can be inserted into a page.
 | Tags `<svg>` and `<animatetransform>` were inserted |
 
 ## Brute forcing allowed events
-[Tags and Events used for brute forcing (Copy tags to clipboard)](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
+[Tags and Events used for brute forcing (Copy tags to clipboard)](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) \
 Payload encoded and decoded: 
 ```
 /?search=%3Csvg%3E+%3Canimatetransform%20§§=1%3E
