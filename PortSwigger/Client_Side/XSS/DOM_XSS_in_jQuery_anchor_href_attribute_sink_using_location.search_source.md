@@ -7,14 +7,14 @@ To solve this lab, make the "back" link alert `document.cookie`.
 # Solution
 Sink - delivery method - function that allows attacker to execute arbitrary javascript code (perform DOM-based SQL injection).
 
-## Test payload
+## Analysis
 |![](Images/image-5.png)|
 |:--:| 
 | Payload: `$ip/feedback?returnPath=/testpayload` |
 |![](Images/image-6.png)|
 | *Vulnerable function* |
 
-## XSS
+## XSS Exploit
 The following payload triggers `alert()` when user cliks on the back button:
 ```
 $ip/feedback?returnPath=javascript:alert('back')

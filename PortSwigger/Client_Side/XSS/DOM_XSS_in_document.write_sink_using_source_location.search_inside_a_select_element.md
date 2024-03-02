@@ -22,7 +22,7 @@ By providing `storeId` value in URL it is possible to add another option locatio
 
 In order to exploit the vulnerability of this website the payload must be constructed in the way that it will break out of selected tag and use for example `<img src=”0” onerror=”alert()”>`.
 
-## XSS
+## XSS Exploit
 The following payload triggers `alert()`:
 ```
 $ip/product?productId=1&storeId=</option> </select> <img src="0" onerror="alert()">

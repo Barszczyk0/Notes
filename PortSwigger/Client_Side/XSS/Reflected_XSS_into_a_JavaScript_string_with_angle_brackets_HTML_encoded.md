@@ -3,13 +3,13 @@
 This lab contains a reflected cross-site scripting vulnerability in the search query tracking functionality where angle brackets are encoded. The reflection occurs inside a JavaScript string. To solve this lab, perform a cross-site scripting attack that breaks out of the JavaScript string and calls the alert function.
 
 # Solution
-## Test payload
+## Analysis
 |![](Images/image-24.png)|
 |:--:| 
 | *Test payload* |
 
 
-## XSS
+## XSS Exploit
 Both of two below presented payloads works (escape from javastring and execute `alert()` function):
 ```
 '-alert()-'

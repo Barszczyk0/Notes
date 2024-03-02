@@ -35,7 +35,7 @@ After attaching `test3` to academyLabHeader test text was presented at the websi
 |:--:| 
 |![](Images/image-15.png)|
 
-## XSS
+## XSS Exploit
 The creation of the `<img>` and giving it incorrect source destination like `src=0` makes browser to send request `$ip/0`, even though the image is detached from the DOM.
 In order to exploit this vulnerability an image request can be made - if image with given name does not exists (`onerror`) function like `alert()` can be called. The `<img>` is detached from the DOM.
 |![](Images/image-16.png)|

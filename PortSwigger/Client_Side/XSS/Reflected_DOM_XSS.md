@@ -36,7 +36,7 @@ $ip/?search=TestPayload
 |:--:| 
 | *Vulnerable code* |
 
-## XSS
+## XSS Exploit
 In order to execute `alert()` it is necessary to break out of the JSON:
 - Character `-` is used because it doesn’t have to be URL encoded and thus is more convenient than `+`
 - Break out of string using  `"`  (`"` will be automatically escaped by  `\` ).

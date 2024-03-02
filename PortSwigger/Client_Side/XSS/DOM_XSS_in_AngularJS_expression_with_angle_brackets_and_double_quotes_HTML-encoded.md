@@ -13,7 +13,7 @@ Payload: `{{ 2 + 2 }}` results in JavaScript execution (addition)
 |:--:| 
 | *Equation was calculated -> Code was executed* |
 
-## XSS
+## XSS Exploit
 There are different possible solutions to this lab.
 
 ### Payload 1

@@ -7,12 +7,12 @@ To solve this lab, perform a cross-site scripting attack that calls the alert fu
 # Solution
 Sink - delivery method - function that allows attacker to execute arbitrary javascript code (perform DOM-based SQL injection).
 
-## Test payload
+## Analysis
 |![](Images/image-3.png)|
 |:--:| 
 | *TestPayload* |
 
-## XSS
+## XSS Exploit
 The following payload triggers `alert()`:
 ```
 <img src='0' onerror='alert()'>
