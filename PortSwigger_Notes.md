@@ -51,6 +51,10 @@
 ## Server-side request forgery
 ## XXE injection
 ## NoSQL injection
+- [Detecting NoSQL injection](/PortSwigger/Server_Side/NoSQL_injection/Detecting_NoSQL_injection.md)
+- [Exploiting NoSQL operator injection to bypass authentication](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_operator_injection_to_bypass_authentication.md)
+- [Exploiting NoSQL injection to extract data](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_injection_to_extract_data.md)
+- [Exploiting NoSQL operator injection to extract unknown fields](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_operator_injection_to_extract_unknown_fields.md)
 ## API testing
 
 # Client-Side topics
