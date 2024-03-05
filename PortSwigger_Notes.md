@@ -49,6 +49,8 @@
 ## File upload vulnerabilities
 ## Race conditions
 ## Server-side request forgery
+- [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
+- [Basic SSRF against another back-end system](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_another_back-end_system.md)
 ## XXE injection
 ## NoSQL injection
 - [Detecting NoSQL injection](/PortSwigger/Server_Side/NoSQL_injection/Detecting_NoSQL_injection.md)
