@@ -47,6 +47,9 @@
 ## Information disclosure vulnerabilities
 - [Information disclosure in error messages](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_error_messages.md)
 - [Information disclosure on debug page](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_on_debug_page.md)
+- [Source code disclosure via backup files](/PortSwigger/Server_Side/Information_disclosure/Source_code_disclosure_via_backup_files.md)
+- [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
+- [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
 ## Access control
 ## File upload vulnerabilities
 ## Race conditions
