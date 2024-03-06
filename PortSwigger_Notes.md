@@ -82,7 +82,14 @@
 - [Reflected XSS into HTML context with most tags and attributes blocked](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_most_tags_and_attributes_blocked.md)
 - [Reflected XSS into HTML context with all tags blocked except custom ones](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_all_tags_blocked_except_custom_ones.md)
 - [Reflected XSS with some SVG markup allowed](/PortSwigger/Client_Side/XSS/Reflected_XSS_with_some_SVG_markup_allowed.md)
-
+- [Reflected XSS in canonical link tag](/PortSwigger/Client_Side/XSS/Reflected_XSS_in_canonical_link_tag.md)
+- [Reflected XSS into a JavaScript string with single quote and backslash escaped](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_a_JavaScript_string_with_single_quote_and_backslash_escaped.md)
+- [Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_a_JavaScript_string_with_angle_brackets_and_double_quotes_HTML-encoded_and_single_quotes_escaped.md)
+- [Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped](/PortSwigger/Client_Side/XSS/Stored_XSS_into_onclick_event_with_angle_brackets_and_double_quotes_HTML-encoded_and_single_quotes_and_backslash_escaped.md)
+- [Reflected XSS into a template literal with angle brackets, single, double quotes, backslash and backticks Unicode-escaped](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_a_template_literal_with_angle_brackets,_single,_double_quotes,_backslash_and_backticks_Unicode-escaped.md)
+- [Exploiting cross-site scripting to steal cookies](/PortSwigger/Client_Side/XSS/Exploiting_cross-site_scripting_to_steal_cookies.md)
+- [Exploiting cross-site scripting to capture passwords](/PortSwigger/Client_Side/XSS/Exploiting_cross-site_scripting_to_capture_passwords.md)
+- [Exploiting XSS to perform CSRF](/PortSwigger/Client_Side/XSS/Exploiting_XSS_to_perform_CSRF.md)
 
 ## Cross-site request forgery (CSRF)
 ## Cross-origin resource sharing (CORS)
