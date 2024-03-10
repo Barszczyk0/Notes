@@ -20,18 +20,22 @@ Both users have the same `csrf` token and `csrfKey` cookie. These security measu
 |![](Images/image-14.png)|
 | *Original change email request from  carlos* |
 
+Moreover, latest search is stored as cookie value in user browser - search term is reflected in the Set-Cookie header.
 
+|![](Images/image-24.png)|
+|:--:| 
+| *Cookie - Latest search term |
 
 ## CSRF Exploit
 In order to solve the lab the following steps must be completed:
 - Craft correct payload (below)
-  - Create a URL that uses this vulnerability to inject your `csrfKey` cookie into the victim's browser
-  - Craft POST request o `/my-account/change-email` with valid `csrf` token and valid `csrfKey` cookie
+  - Create a URL to inject your `csrfKey` cookie into the victim's browser
+  - Craft POST request to `/my-account/change-email` with valid `csrf` token and valid `csrfKey` cookie
 - `Store` it
 - (Optional) Test it on yourselft - `View exploit`
 - `Deliver exploit to victim`
 
-URL decoded characters `%0d%0a` are `\r\n` (carriage return and line feed). They are used to seperate headers in HTTP/1.1 requests.
+URL encoded characters `%0d%0a` are `\r\n` (carriage return and line feed). They are used to seperate headers in HTTP/1.1 requests.
 
 ```html
 <form method="POST" action="URL/my-account/change-email">

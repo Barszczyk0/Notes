@@ -14,7 +14,7 @@ Even though the website have `csrf` token website might not handle correctly the
 
 ## CSRF Exploit
 In order to solve the lab the following steps must be completed:
-- Craft correct payload (below) - Craft POST request o `/my-account/change-email` without any `csrf` token
+- Craft correct payload (below) - Craft POST request to `/my-account/change-email` without any `csrf` token
 - `Store` it
 - (Optional) Test it on yourselft - `View exploit`
 - `Deliver exploit to victim`
