@@ -51,6 +51,18 @@
 - [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
 - [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
 ## Access control
+- [Unprotected admin functionality](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality.md)
+- [Unprotected admin functionality with unpredictable URL](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality_with_unpredictable_URL.md)
+- [User role controlled by request parameter](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_role_controlled_by_request_parameter.md)
+- [User role can be modified in user profile](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_role_can_be_modified_in_user_profile.md)
+- [User ID controlled by request parameter](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter.md)
+- [User ID controlled by request parameter, with unpredictable user IDs](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter,_with_unpredictable_user_IDs.md)
+- [User ID controlled by request parameter with data leakage in redirect](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter_with_data_leakage_in_redirect%20.md)
+- [User ID controlled by request parameter with password disclosure](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter_with_password_disclosure.md)
+- [Insecure direct object references](/PortSwigger/Server_Side/Access_control_vulnerabilities/Insecure_direct_object_references.md)
+- [URL-based access control can be circumvented](/PortSwigger/Server_Side/Access_control_vulnerabilities/URL-based_access_control_can_be_circumvented.md)
+- [Method-based access control can be circumvented](/PortSwigger/Server_Side/Access_control_vulnerabilities/Method-based_access_control_can_be_circumvented.md)
+
 ## File upload vulnerabilities
 ## Race conditions
 ## Server-side request forgery
