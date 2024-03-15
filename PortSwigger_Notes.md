@@ -113,6 +113,8 @@
 
 ## Cross-origin resource sharing (CORS)
 ## Clickjacking
+- [Basic clickjacking with CSRF token protection](/PortSwigger/Client_Side/Clickjacking/Basic_clickjacking_with_CSRF_token_protection.md)
+
 ## DOM-based vulnerabilities
 ## WebSockets
 
