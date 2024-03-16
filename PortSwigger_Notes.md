@@ -122,6 +122,8 @@
 # Advanced topics
 ## Insecure deserialization
 ## Web LLM attacks
+- [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
+
 ## GraphQL API vulnerabilities
 ## Server-side template injection
 ## Web cache poisoning
@@ -130,5 +132,6 @@
 ## OAuth authentication
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
+
 ## Prototype pollution
 ## Essential skills
