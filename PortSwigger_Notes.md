@@ -121,6 +121,9 @@
 
 # Advanced topics
 ## Insecure deserialization
+- [Modifying serialized objects](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_objects.md)
+- [Modifying serialized data types](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_data_types.md)
+ 
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
 
@@ -134,5 +137,7 @@
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
 - [JWT authentication bypass via flawed signature verification](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_flawed_signature_verification.md)
 - [JWT authentication bypass via weak signing key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_weak_signing_key.md)
+- [JWT authentication bypass via jwk header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jwk_header_injection.md)
+
 ## Prototype pollution
 ## Essential skills
