@@ -132,6 +132,7 @@
 ## OAuth authentication
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
-
+- [JWT authentication bypass via flawed signature verification](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_flawed_signature_verification.md)
+- [JWT authentication bypass via weak signing key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_weak_signing_key.md)
 ## Prototype pollution
 ## Essential skills
