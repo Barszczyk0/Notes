@@ -1,4 +1,4 @@
-# Server-Side topics
+# Server-Side Topics
 ## SQL Injection
 - [SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](/PortSwigger/Server_Side/SQL_injection/SQL_injection_vulnerability_in_WHERE_clause_allowing_retrieval_of_hidden_data.md)
 - [SQL injection vulnerability allowing login bypass](/PortSwigger/Server_Side/SQL_injection/SQL_injection_vulnerability_allowing_login_bypass.md)
@@ -43,13 +43,13 @@
 - [Blind OS command injection with out-of-band interaction](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_interaction.md)
 - [Blind OS command injection with out-of-band data exfiltration](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_data_exfiltration.md)
 
-## Business logic vulnerabilities
 ## Information disclosure vulnerabilities
 - [Information disclosure in error messages](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_error_messages.md)
 - [Information disclosure on debug page](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_on_debug_page.md)
 - [Source code disclosure via backup files](/PortSwigger/Server_Side/Information_disclosure/Source_code_disclosure_via_backup_files.md)
 - [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
 - [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
+
 ## Access control
 - [Unprotected admin functionality](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality.md)
 - [Unprotected admin functionality with unpredictable URL](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality_with_unpredictable_URL.md)
@@ -64,19 +64,21 @@
 - [Method-based access control can be circumvented](/PortSwigger/Server_Side/Access_control_vulnerabilities/Method-based_access_control_can_be_circumvented.md)
 
 ## File upload vulnerabilities
-## Race conditions
+- [Remote code execution via web shell upload](/PortSwigger/Server_Side/File_upload_vulnerabilities/Remote_code_execution_via_web_shell_upload.md)
+- [Web shell upload via Content-Type restriction bypass](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_Content_Type_restriction_bypass.md)
+
 ## Server-side request forgery
 - [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
 - [Basic SSRF against another back-end system](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_another_back-end_system.md)
-## XXE injection
+
 ## NoSQL injection
 - [Detecting NoSQL injection](/PortSwigger/Server_Side/NoSQL_injection/Detecting_NoSQL_injection.md)
 - [Exploiting NoSQL operator injection to bypass authentication](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_operator_injection_to_bypass_authentication.md)
 - [Exploiting NoSQL injection to extract data](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_injection_to_extract_data.md)
 - [Exploiting NoSQL operator injection to extract unknown fields](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_operator_injection_to_extract_unknown_fields.md)
-## API testing
 
-# Client-Side topics
+
+# Client-Side Topics
 ## Cross-site scripting (XXS)
 - [Reflected XSS into HTML context with nothing encoded](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_nothing_encoded.md)
 - [Stored XSS into HTML context with nothing encoded](/PortSwigger/Client_Side/XSS/Stored_XSS_into_HTML_context_with_nothing_encoded.md)
@@ -112,14 +114,18 @@
 - [CSRF where token is duplicated in cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_duplicated_in_cookie.md)
 
 ## Cross-origin resource sharing (CORS)
+- [CSRF vulnerability with no defenses](/PortSwigger/Client_Side/CSRF/CSRF_vulnerability_with_no_defenses.md)
+- [CSRF where token validation depends on request method](/PortSwigger/Client_Side/CSRF/CSRF_where_token_validation_depends_on_request_method.md)
+- [CSRF where token validation depends on token being present](/PortSwigger/Client_Side/CSRF/CSRF_where_token_validation_depends_on_token_being_present.md)
+- [CSRF where token is not tied to user session](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_not_tied_to_user_session.md)
+- [CSRF where token is tied to non-session cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_tied_to_non-session_cookie.md)
+- [CSRF where token is duplicated in cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_duplicated_in_cookie.md)
+
 ## Clickjacking
 - [Basic clickjacking with CSRF token protection](/PortSwigger/Client_Side/Clickjacking/Basic_clickjacking_with_CSRF_token_protection.md)
 
-## DOM-based vulnerabilities
-## WebSockets
 
-
-# Advanced topics
+# Advanced Topics
 ## Insecure deserialization
 - [Modifying serialized objects](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_objects.md)
 - [Modifying serialized data types](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_data_types.md)
@@ -127,17 +133,14 @@
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
 
-## GraphQL API vulnerabilities
-## Server-side template injection
-## Web cache poisoning
-## HTTP Host header attacks
 ## HTTP request smuggling
-## OAuth authentication
+- [HTTP request smuggling - Cheat Sheet](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Request_smuggling_cheat_sheet.md)
+- [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
+- [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
+- [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
+
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
 - [JWT authentication bypass via flawed signature verification](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_flawed_signature_verification.md)
 - [JWT authentication bypass via weak signing key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_weak_signing_key.md)
 - [JWT authentication bypass via jwk header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jwk_header_injection.md)
-
-## Prototype pollution
-## Essential skills
