@@ -5,3 +5,4 @@
 - [nmap](/Tools/nmap.md)
 - [nc](/Tools/nc.md)
 - [socat](/Tools/socat.md)
+- [ffuf](/Tools/ffuf.md)
