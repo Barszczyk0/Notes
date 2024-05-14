@@ -113,14 +113,6 @@
 - [CSRF where token is tied to non-session cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_tied_to_non-session_cookie.md)
 - [CSRF where token is duplicated in cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_duplicated_in_cookie.md)
 
-## Cross-origin resource sharing (CORS)
-- [CSRF vulnerability with no defenses](/PortSwigger/Client_Side/CSRF/CSRF_vulnerability_with_no_defenses.md)
-- [CSRF where token validation depends on request method](/PortSwigger/Client_Side/CSRF/CSRF_where_token_validation_depends_on_request_method.md)
-- [CSRF where token validation depends on token being present](/PortSwigger/Client_Side/CSRF/CSRF_where_token_validation_depends_on_token_being_present.md)
-- [CSRF where token is not tied to user session](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_not_tied_to_user_session.md)
-- [CSRF where token is tied to non-session cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_tied_to_non-session_cookie.md)
-- [CSRF where token is duplicated in cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_duplicated_in_cookie.md)
-
 ## Clickjacking
 - [Basic clickjacking with CSRF token protection](/PortSwigger/Client_Side/Clickjacking/Basic_clickjacking_with_CSRF_token_protection.md)
 
