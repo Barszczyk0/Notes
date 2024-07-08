@@ -116,6 +116,10 @@
 ## Clickjacking
 - [Basic clickjacking with CSRF token protection](/PortSwigger/Client_Side/Clickjacking/Basic_clickjacking_with_CSRF_token_protection.md)
 
+## Cross-origin resource sharing (CORS)
+- [CORS vulnerability with basic origin reflection](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_basic_origin_reflection.md)
+- [CORS vulnerability with trusted null origin](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_trusted_null_origin.md)
+
 ## XML external entity (XXE) injection
 - [Exploiting XXE using external entities to retrieve files](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_using_external_entities_to_retrieve_files.md)
 - [Exploiting XXE to perform SSRF attacks](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_to_perform_SSRF_attacks.md)
