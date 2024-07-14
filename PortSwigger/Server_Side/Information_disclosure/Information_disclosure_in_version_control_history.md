@@ -8,5 +8,5 @@ This lab discloses sensitive information via its version control history. To sol
 | *Git directory* |
 |![](Images/image-11.png)|
 | *Removal of admin password* |
-|![](Images/image-10.png)|
+|![](Images/image-12.png)|
 | *Administrator's password* |
