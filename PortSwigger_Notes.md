@@ -35,6 +35,8 @@
 - [File path traversal, traversal sequences stripped with superfluous URL-decode](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_traversal_sequences_stripped_with_superfluous_URL-decode.md)
 - [File path traversal, validation of start of path](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_start_of-path.md)
 - [File path traversal, validation of file extension with null byte bypass](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_file_extension_with_null_byte_bypass.md)
+- [2FA broken logic](/PortSwigger/Server_Side/Authentication/2FA_broken_logic.md)
+- [Brute-forcing a stay-logged-in cookie](/PortSwigger/Server_Side/Authentication/Brute-forcing_a_stay-logged-in_cookie.md)
 
 ## OS command injection
 - [OS command injection, simple case](/PortSwigger/Server_Side/OS_command_injection/OS_command_injection,_simple_case.md)
@@ -131,6 +133,14 @@
  
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
+
+## Server-side template injection
+- [Server-side template injection - Cheat Sheet](/PortSwigger/Advanced_topics/Server-side_template_injection/SSTI_cheat_cheet.md)
+- [Basic server-side template injection](/PortSwigger/Advanced_topics/Server-side_template_injection/Basic_server-side_template_injection.md)
+- [Basic server-side template injection (code context)](/PortSwigger/Advanced_topics/Server-side_template_injection/Basic_server-side_template_injection_(code_context).md)
+- [Server-side template injection using documentation](/PortSwigger/Advanced_topics/Server-side_template_injection/Server_side_template_injection_using_documentation.md)
+- [Server-side template injection in an unknown language with a documented exploit](/PortSwigger/Advanced_topics/Server-side_template_injection/Server_side_template_injection_in_an_unknown_language_with_a_documented_exploit.md)
+- [Server-side template injection with information disclosure via user-supplied objects](/PortSwigger/Advanced_topics/Server-side_template_injection/Server_side_template_injection_with_information_disclosure_via_user-supplied_objects.md)
 
 ## HTTP request smuggling
 - [HTTP request smuggling - Cheat Sheet](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Request_smuggling_cheat_sheet.md)
