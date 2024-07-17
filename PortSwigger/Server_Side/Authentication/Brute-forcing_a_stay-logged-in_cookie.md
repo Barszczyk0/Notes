@@ -10,9 +10,9 @@ Victim's username: `carlos`\
 ## Analysis
 |![](Images/image-37.png)|
 |:--:| 
-| `Stay logged in` cookie value |
+| `stay-logged-in` cookie value |
 |![](Images/image-38.png)|
-| `Stay logged in` cookie construction |
+| `stay-logged-in` cookie construction |
 
 Cookie construction:
 ```
