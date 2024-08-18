@@ -81,3 +81,24 @@ tshark -Y 'tcp'
 tshark -Y 'http'
 ```
 
+## Practical examples
+
+```
+Get all domains from based on dns traffic:
+tshark -r demo.pcap -Y "dns.count.answers > 0" -T fields -e dns.qry.name -e dns.resp.name
+
+Show IP addresses based on dns responses:
+tshark -r demo.pcap -Y "dns.flags.response == 1" -T fields -e dns.qry.name -e dns.a
+
+Show all http requests sent to given domain:
+tshark -r demo.pcap -Y 'http.host == "example.com" || http.host == "anotherexample.com"' -T fields -e frame.number -e ip.src -e http.host -e http.request.uri
+
+Show server information based on http responses:
+tshark -r demo.pcap -Y 'http.response' -T fields -e frame.number -e ip.src -e ip.dst -e http.host -e http.server
+
+Exporting all http/smb/tftp objects:
+tshark -r demo.pcap --export-objects http,http_export_directory
+tshark -r demo.pcap --export-objects smb,smb_export_directory
+tshark -r demo.pcap --export-objects tftp,tftp_export_directory
+```
+
