@@ -1,4 +1,9 @@
 # nc
+# Port scan
+```
+nc -zv $ip 1-1000 2>&1 | grep -v failed
+```
+
 # Reverse shell
 ```
 nc -lvnp <port-number>
@@ -6,6 +11,7 @@ nc -lvnp <port-number>
 ```
 nc <target-ip> <chosen-port>
 ```
+
 # Shell stabilization
 ## Shell stabilization via python
 ```
