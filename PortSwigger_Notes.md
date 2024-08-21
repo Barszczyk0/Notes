@@ -52,6 +52,12 @@
 - [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
 - [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
 
+## Business logic vulnerabilities
+- [Excessive trust in client-side controls](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Excessive_trust_in_client-side_controls.md)
+- [High-level logic vulnerability](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/High-level_logic_vulnerability.md)
+- [Inconsistent security controls](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Inconsistent_security_controls.md)
+- [Flawed enforcement of business rules](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Flawed_enforcement_of_business_rules.md)
+
 ## Access control
 - [Unprotected admin functionality](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality.md)
 - [Unprotected admin functionality with unpredictable URL](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality_with_unpredictable_URL.md)
