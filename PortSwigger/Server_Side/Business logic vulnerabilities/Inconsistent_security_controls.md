@@ -4,7 +4,7 @@ This lab's flawed logic allows arbitrary users to access administrative function
 
 # Solution
 ## Analysis
-Application possibly treats users from domain `@dontwannacry.com` differently than others.
+Application possibly treats users from `@dontwannacry.com` domain differently than others.
 |![](Images/image-9.png)|
 |:--:| 
 | *Item is too expensive* |
