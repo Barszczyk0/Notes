@@ -30,6 +30,12 @@ X-Forwarded-Host    --> Maintains the original host requested by the client.
 X-Forwarded-Port    --> Specifies the port number used by the client to connect to the proxy.
 X-Forwarded-Proto   --> Indicates the protocol (HTTP or HTTPS) used by the client.
 X-Forwarded-Scheme  --> Indicates the protocol (HTTP or HTTPS) used by the client.
+
+Alternative headers:
+X-Host
+X-Forwarded-Server
+X-HTTP-Host-Override
+Forwarded
 ```
 
 Examle:
