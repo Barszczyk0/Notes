@@ -53,10 +53,12 @@
 - [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
 
 ## Business logic vulnerabilities
-- [Excessive trust in client-side controls](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Excessive_trust_in_client-side_controls.md)
-- [High-level logic vulnerability](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/High-level_logic_vulnerability.md)
-- [Inconsistent security controls](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Inconsistent_security_controls.md)
-- [Flawed enforcement of business rules](/PortSwigger/Server_Side/Business%20logic%20vulnerabilities/Flawed_enforcement_of_business_rules.md)
+- [Excessive trust in client-side controls](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Excessive_trust_in_client-side_controls.md)
+- [High-level logic vulnerability](/PortSwigger/Server_Side/Business_logic_vulnerabilities/High-level_logic_vulnerability.md)
+- [Inconsistent security controls](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Inconsistent_security_controls.md)
+- [Flawed enforcement of business rules](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Flawed_enforcement_of_business_rules.md)
+- [Low-level logic flaw](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Low-level_logic_flaw.md)
+- [Inconsistent handling of exceptional input](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Inconsistent_handling_of_exceptional_input.md)
 
 ## Access control
 - [Unprotected admin functionality](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality.md)
@@ -65,7 +67,7 @@
 - [User role can be modified in user profile](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_role_can_be_modified_in_user_profile.md)
 - [User ID controlled by request parameter](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter.md)
 - [User ID controlled by request parameter, with unpredictable user IDs](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter,_with_unpredictable_user_IDs.md)
-- [User ID controlled by request parameter with data leakage in redirect](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter_with_data_leakage_in_redirect%20.md)
+- [User ID controlled by request parameter with data leakage in redirect](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter_with_data_leakage_in_redirect.md)
 - [User ID controlled by request parameter with password disclosure](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter_with_password_disclosure.md)
 - [Insecure direct object references](/PortSwigger/Server_Side/Access_control_vulnerabilities/Insecure_direct_object_references.md)
 - [URL-based access control can be circumvented](/PortSwigger/Server_Side/Access_control_vulnerabilities/URL-based_access_control_can_be_circumvented.md)
@@ -153,6 +155,18 @@
 - [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
 - [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
 - [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
+
+## Web cache poisoning
+- [Web cache poisoning with an unkeyed header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_header.md)
+- [Web cache poisoning with an unkeyed cookie](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_cookie.md)
+- [Web cache poisoning with multiple headers](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_multiple_headers.md)
+- [Targeted web cache poisoning using an unknown header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Targeted_web_cache_poisoning_using_an_unknown_header.md)
+- [Web cache poisoning via an unkeyed query string](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_string.md)
+- [Web cache poisoning via an unkeyed query parameter](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_parameter.md)
+
+## HTTP Host header attacks
+- [Basic password reset poisoning](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Basic_password_reset_poisoning.md)
+- [Host header authentication bypass](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Host_header_authentication_bypass.md)
 
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
