@@ -1,4 +1,4 @@
-# pwn shellcraft
+# Pwn shellcraft
 ```
 List available payloads
 pwn shellcraft -l
