@@ -1,4 +1,4 @@
-# socat
+# Socat
 # Transferring static binary
 ```
 sudo python3 -m http.server 80
