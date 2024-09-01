@@ -1,4 +1,4 @@
-# nc
+# Nc
 # Port scan
 ```
 nc -zv $ip 1-1000 2>&1 | grep -v failed
@@ -35,4 +35,14 @@ stty -a
 Set rows and columns in reverse shell
 stty rows <number>
 stty cols <number>
+```
+
+# File transfer
+
+```
+Receiver:
+nc -lvnp 1234 > file
+
+Sender:
+nc -w 3 $ip 1234 < file
 ```
