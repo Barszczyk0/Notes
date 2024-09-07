@@ -5,7 +5,8 @@ The front-end server rejects requests that aren't using the GET or POST method.\
 To solve the lab, smuggle a request to the back-end server, so that the next request processed by the back-end server appears to use the method `GPOST`.
 
 # Solution
-## Determinig what the front-end is using
+## Analysis
+### Determinig what the front-end is using
 If front-end uses `Transfer-Encoding` header it should response with error, because `X` is not valid chunk size.
 ```
 POST / HTTP/1.1
@@ -28,8 +29,8 @@ X
 |![](Images/image-12.png)|
 | *Read timeout - Deletion of the extra line after X causes different error* |
 
-## Determining what the back-end is using
-This request after coming from front-end is striped of the `X` - the vale of content length header is not valid (Changing it in the below payload does not change the response).
+### Determining what the back-end is using
+This request after coming from front-end is striped of the `X` - the value of content length header is not valid (Changing it in the below payload does not change the response).
 
 ```
 POST / HTTP/1.1
@@ -50,7 +51,7 @@ X
 |:--:| 
 | *No error - Back-end is using Transfer Encoding header* |
 
-## Obfuscating transfer encoding header
+### Obfuscating transfer encoding header
 Adding a second `Transfer-Encoding` header with invalid value forced back-end to ignore `Transfer-Encoding` header and evaluate `Content-Length` header instead. In the example below, the request after coming from front-end is striped of the `X` - the value of content length header is not valid. Because of this back-end waited for the mising byte which lead to time-out.
 
 ```
