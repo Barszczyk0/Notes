@@ -152,6 +152,10 @@
 
 ## HTTP request smuggling
 - [HTTP request smuggling - Cheat Sheet](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Request_smuggling_cheat_sheet.md)
+- [HTTP request smuggling, confirming a CL.TE vulnerability via differential responses](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_confirming_a_CL.TE_vulnerability_via_differential_responses.md)
+- [HTTP request smuggling, confirming a TE.CL vulnerability via differential responses](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_confirming_a_TE.CL_vulnerability_via_differential_responses.md)
+- [Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_bypass_front-end_security_controls,_CL.TE_vulnerability.md)
+- [Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_bypass_front-end_security_controls,_TE.CL_vulnerability.md)
 - [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
 - [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
 - [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
