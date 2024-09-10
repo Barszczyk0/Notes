@@ -158,6 +158,9 @@
 - [Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_bypass_front-end_security_controls,_TE.CL_vulnerability.md)
 - [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
 - [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
+- [Exploiting HTTP request smuggling to reveal front-end request rewriting](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_reveal_front-end_request_rewriting.md)
+- [Exploiting HTTP request smuggling to capture other users' requests](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_capture_other_users'_requests.md)
+- [Exploiting HTTP request smuggling to deliver reflected XSS](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_deliver_reflected_XSS.md)
 - [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
 
 ## Web cache poisoning
