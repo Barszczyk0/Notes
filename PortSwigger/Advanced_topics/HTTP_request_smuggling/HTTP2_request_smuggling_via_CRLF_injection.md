@@ -60,11 +60,11 @@ Foo: bar\r\nContent-Length: 0
 SMUGGLED
 ```
 
-|![](Images/image-66.png)|
+|![](Images/image-67.png)|
 |:--:| 
 | *Request is denied due to duplicated CL headers* |
 
-#### H2.TE attemp
+#### H2.TE attempt
 Website is vulnerable to `H2.TE` request smuggling.
 
 ```
@@ -80,13 +80,13 @@ SMUGGLED
 
 |![](Images/image-66.png)|
 |:--:| 
-| *HTTP/2 downgrading vulnerability* |
+| *HTTP/2 downgrading vulnerability occured* |
 
 
 ## Exploitation
 First request poisoned the back-end. Second request that cames from victim is appended to the previous request. Thanks to this a new comment is posted on the website that includes victim's request headers including victim's session cookie.
 
-`Content-Length: 604` heaser was added automatically.
+`Content-Length: 604` header was added automatically.
 
 ```
 POST / HTTP/2
