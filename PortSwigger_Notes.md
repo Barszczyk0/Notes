@@ -76,6 +76,7 @@
 ## File upload vulnerabilities
 - [Remote code execution via web shell upload](/PortSwigger/Server_Side/File_upload_vulnerabilities/Remote_code_execution_via_web_shell_upload.md)
 - [Web shell upload via Content-Type restriction bypass](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_Content_Type_restriction_bypass.md)
+- [Web shell upload via path traversal](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_path_traversal.md)
 
 ## Server-side request forgery
 - [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
@@ -156,11 +157,16 @@
 - [HTTP request smuggling, confirming a TE.CL vulnerability via differential responses](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_confirming_a_TE.CL_vulnerability_via_differential_responses.md)
 - [Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_bypass_front-end_security_controls,_CL.TE_vulnerability.md)
 - [Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_bypass_front-end_security_controls,_TE.CL_vulnerability.md)
-- [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
-- [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
 - [Exploiting HTTP request smuggling to reveal front-end request rewriting](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_reveal_front-end_request_rewriting.md)
 - [Exploiting HTTP request smuggling to capture other users' requests](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_capture_other_users'_requests.md)
 - [Exploiting HTTP request smuggling to deliver reflected XSS](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Exploiting_HTTP_request_smuggling_to_deliver_reflected_XSS.md)
+- [Response queue poisoning via H2.TE request smuggling](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Response_queue_poisoning_via_H2.TE_request_smuggling.md)
+- [H2.CL request smuggling](/PortSwigger/Advanced_topics/HTTP_request_smuggling/H2.CL_request_smuggling.md)
+- [HTTP/2 request smuggling via CRLF injection](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP2_request_smuggling_via_CRLF_injection.md)
+- [HTTP/2 request splitting via CRLF injection](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP2_request_splitting_via_CRLF_injection.md)
+- [CL.0 request smuggling](/PortSwigger/Advanced_topics/HTTP_request_smuggling/CL.0_request_smuggling.md)
+- [HTTP request smuggling, basic CL.TE vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_CL.TE_vulnerability.md)
+- [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
 - [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
 
 ## Web cache poisoning
