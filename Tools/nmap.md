@@ -1,8 +1,7 @@
 # Nmap
 
-
-# TCP Scans
-## Connect Scan
+## TCP Scans
+### Connect Scan
 ```
 nmap -sT <IP>
 
@@ -17,7 +16,7 @@ attacker <-- (RST, ACK) target
 Port is closed
 ```
 
-## SYN Scan
+### SYN Scan
 ```
 nmap -sS <IP>
 
@@ -31,7 +30,7 @@ attacker <-- (RST, ACK) target
 Port is closed
 ```
 
-## NULL Scan
+### NULL Scan
 ```
 nmap -sN <IP>
 
@@ -43,7 +42,7 @@ attacker <-- (RST, ACK) target
 Port is closed
 ```
 
-## FIN Scan
+### FIN Scan
 ```
 nmap -sF <IP>
 
@@ -55,7 +54,7 @@ attacker <-- (RST, ACK) target
 Port is closed
 ```
 
-## XMAS Scan
+### XMAS Scan
 ```
 nmap -sX <IP>
 
@@ -67,7 +66,7 @@ attacker <-- (RST, ACK) target
 Port is closed
 ```
 
-## Maimon Scan
+### Maimon Scan
 ```
 nmap -sM <IP>
 
@@ -76,7 +75,7 @@ attacker <-- (RST) target
 Port is open or closed
 ```
 
-## ACK Scan
+### ACK Scan
 ```
 nmap -sA <IP>
 
@@ -85,7 +84,7 @@ attacker <-- (RST) target
 Port is open or closed
 ```
 
-## Window Scan
+### Window Scan
 Similar to ACk SCAN. Window Scan examines the TCP Window field of the RST packets returned. On some systems, open ports use a positive window size (even for RST packets) while closed ones have a zero window.
 ```
 nmap -sW <IP>
@@ -95,7 +94,7 @@ attacker <-- (RST) target
 Port is open or closed
 ```
 
-# UDP Scans
+## UDP Scans
 ```
 nmap -sU <IP>
 
@@ -107,8 +106,8 @@ attacker <--(ICMP Type 3, Code 3) target
 Port is closed
 ```
 
-# ICMP Scan
-## ICMP Echo Scan
+## ICMP Scan
+### ICMP Echo Scan
 ```
 nmap -PE -sn <IPs>
 
@@ -116,7 +115,7 @@ attacker (ICMP Echo Request) --> target
 attacker <-- (ICMP Echo Reply) target
 ```
 
-## ICMP Timestamp Scan
+### ICMP Timestamp Scan
 ```
 nmap -PP  -sn <IPs>
 
@@ -124,7 +123,7 @@ attacker (ICMP Timestamp Request) --> target
 attacker <-- (ICMP Timestamp Reply) target
 ```
 
-## ICMP Mask Scan
+### ICMP Mask Scan
 ```
 nmap -PP  -sn <IPs>
 
@@ -132,31 +131,31 @@ attacker (ICMP Address Mask Request) --> target
 attacker <-- (ICMP  Address Mask Reply) target
 ```
 
-# ARP Scan
+## ARP Scan
 ```
 nmap -PR -sn <IPs>
 ```
 
-# Changing source port for scanning
+## Changing source port for scanning
 ```
 nmap -sS -g <PORT_NUMBER> <IP>
 nmap -sS --source-port <PORT_NUMBER> <IP>
 ```
 
-# Packet fragmentation
+## Packet fragmentation
 ```
 -f    - to set the data in the IP packet to 8 bytes
 -ff   - to limit the data in the IP packet to 16 bytes at most
 --mtu SIZE - to provide a custom size for data carried within the IP packet (multiples of 8)
 ```
 
-# Important
+## Important
 ```
 -sn - Skip port scan (host discovery only)
 -Pn - Skip host discovery
 ```
 
-# Misc
+## Misc
 ```
 -T 4
 -F
