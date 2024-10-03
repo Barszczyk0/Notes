@@ -1,6 +1,6 @@
 # GNU Debugger (GDB)
 
-# Starting gdb
+## Starting gdb
 ```
 > gdb program_to_debug
 (gdb) run
@@ -10,7 +10,7 @@
 echo "set disassembly-flavor intel" > ~/.gdbinit
 echo "# source gef.py" >> ~/.gdbinit
 ```
-# Setting break point
+## Setting break point
 ```
 Set breakpoint at main function
 (gdb) break *main
@@ -26,13 +26,13 @@ Delete a breakpoint based on previous command
 (gdb) delete break 1
 ```
 
-# Inspecting registers
-## Printing registers
+## Inspecting registers
+### Printing registers
 ```
 (gdb) info regisers
 (gdb) print $rip
 ```
-## Examining registers
+### Examining registers
 ```
 Examine instruction at given location
 (gdb) x/i $rip
@@ -77,7 +77,7 @@ Example:
 0x7fffffffde10: 0x0     0x55555540088e <main>
 ```
 
-## Casting
+### Casting
 
 ```
 Casting $rsp to a pointer to a long and dereferncing it
@@ -100,13 +100,13 @@ $5 = 0x5555554008a7 <main+25>
 5555554008a7
 ```
 
-# Inspecting assembly code
+## Inspecting assembly code
 ```
 (gdb) disassemble *main
 (gdb) dissasemble *function_name
 ```
 
-# Stepping through instructions
+## Stepping through instructions
 ```
 Display information after a step
 (gdb) display/a $rip
@@ -122,9 +122,9 @@ Continue until breakpoint
 Skip instruction (step out of a call)
 (gdb) finish
 ```
-# Variables
+## Variables
 
-## User defined variables
+### User defined variables
 ```
 Create new variable and assign value to it
 (gdb) set $variable_name = $rdi
@@ -132,7 +132,7 @@ Print new variable
 (gdb) p $variable_name
 ```
 
-## Modifying registers values
+### Modifying registers values
 ```
 Modify given register value
 (gdb) set *(long *) $rsp = 0xdead
@@ -149,7 +149,7 @@ Example:
 0x7fffffffddb8: 0x000000000000dead
 ```
 
-# Scripting
+## Scripting
 ```
 > gdb -x script_name.gdb program_to_debug
 ```
@@ -167,8 +167,8 @@ run parameter_1 parameter_2
 q
 ```
 
-# GDB Enhanced Features (GEF)
-## Setup for split screen debugging
+## GDB Enhanced Features (GEF)
+### Setup for split screen debugging
 ```
 mkfifo /tmp/challange
 ```
