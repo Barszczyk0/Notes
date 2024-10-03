@@ -6,7 +6,7 @@ sudo snort -c /etc/snort/snort.conf -T -q
     -q quiet
 ```
 
-# Sniffer mode
+## Sniffer mode
 ```
 sudo snort -v -i eth0
     -v verbose mode
@@ -24,7 +24,7 @@ sudo snort -X
     -X display the full packet details in HE
 ```
 
-# Logger mode
+## Logger mode
 ```
 snort -dev -l .
     -dev
@@ -37,8 +37,8 @@ sudo snort -dev -K ASCII
     -K log packets in ASCII format
 ```
 
-# Reading files
-## Reading generated logs
+## Reading files
+### Reading generated logs
 ```
 sudo snort -dvr snort.log.5678459890 -n 10
     -d dispaly the packet data
@@ -47,21 +47,21 @@ sudo snort -dvr snort.log.5678459890 -n 10
     -n read first 10 packets
 ```
 
-## Reading pcap file
+### Reading pcap file
 ```
 sudo snort -r icmp-test.pcap
 sudo snort -c /etc/snort/snort.conf -q -r icmp-test.pcap -A console
 sudo snort -c /etc/snort/snort.conf -q --pcap-list="icmp.pcap http.pcap" -A console 
 ```
 
-## Filtering
+### Filtering
 ```
 sudo snort -r snort.log.5678459890 icmp
 sudo snort -r snort.log.5678459890 udp
 sudo snort -r snort.log.5678459890 'udp and port 53'
 ```
 
-## IDS/IPS mode
+### IDS/IPS mode
 ```
 sudo snort -c /etc/snort/snort.conf -T
     -c configuration (IDS/IPS alerts, messages, etc.)
