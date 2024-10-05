@@ -77,6 +77,8 @@
 - [Remote code execution via web shell upload](/PortSwigger/Server_Side/File_upload_vulnerabilities/Remote_code_execution_via_web_shell_upload.md)
 - [Web shell upload via Content-Type restriction bypass](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_Content_Type_restriction_bypass.md)
 - [Web shell upload via path traversal](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_path_traversal.md)
+- [Web shell upload via extension blacklist bypass](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_extension_blacklist_bypass.md)
+- [Web shell upload via obfuscated file extension](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_obfuscated_file_extension.md)
 
 ## Server-side request forgery
 - [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
