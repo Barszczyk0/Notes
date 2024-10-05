@@ -25,7 +25,7 @@ GET /example/exploit.php?command=whoami HTTP/1.1
 |:--:| 
 | *PHP code* |
 |![](Images/image-2.png)|
-| *PHP payload code upload* |
+| *Successful PHP payload upload* |
 |![](Images/image-3.png)|
 | *Path to uploaded file* |
 |![](Images/image-4.png)|
