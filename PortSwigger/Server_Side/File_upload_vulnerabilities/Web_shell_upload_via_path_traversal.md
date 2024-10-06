@@ -17,6 +17,11 @@ You can log in to your own account using the following credentials: `wiener:pete
 |![](Images/image-11.png)|
 | *Path to uploaded file* |
 
+Above file upload request and response reveal information about server:
+```
+Server: Apache/2.4.41 (Ubuntu)
+```
+
 ### PHP payload upload test
 Application prevents from file execution in user-accessible directories.
 
