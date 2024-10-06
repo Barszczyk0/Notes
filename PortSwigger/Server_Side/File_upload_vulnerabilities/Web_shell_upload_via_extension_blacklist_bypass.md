@@ -16,6 +16,10 @@ You can log in to your own account using the following credentials: `wiener:pete
 |![](Images/image-18.png)|
 | *Path to uploaded file* |
 
+Above file upload request and response reveal information about server:
+```
+Server: Apache/2.4.41 (Ubuntu)
+```
 ### Configuration files
 Above file upload request and response reveal information about server:
 ```
