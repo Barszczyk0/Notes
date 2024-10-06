@@ -32,7 +32,6 @@ This webiste probably rely on anti-virus software that checks all files that are
 1. Attacker uploades a malicious file
 2. Attacker tries to query the malicious file before it gets deleted in order to trigger PHP payload
 
-This application 
 |![](Images/image-42.png)|
 |:--:| 
 | *Turbo Intruder configuration* |
