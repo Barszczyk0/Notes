@@ -10,11 +10,13 @@ The website in this lab uses JWT to handle different users.
 |![](Images/image-9.png)|
 |:--:| 
 | *JWT* |
-## Injecting JWK header
-According to the JWS specification, only the alg header parameter is mandatory. Using extra field `jwk` attacker could add his own public RSA key and sign message with his private RSA key.
+
+## Exploitation
+### Injecting JWK header
 ```
 JWK (JSON Web Key) - Provides an embedded JSON object representing the key. 
 ```
+According to the JWS specification, only the `alg` header parameter is mandatory. By using extra field `jwk`, attacker can add his own public RSA key and sign message with his private RSA key. Misconfigured server might use key that's embedded in the jwk parameter to verify token.
 
 |![](Images/image-25.png)|
 |:--:| 
