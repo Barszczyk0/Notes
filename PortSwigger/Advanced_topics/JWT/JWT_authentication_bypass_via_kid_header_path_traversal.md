@@ -36,4 +36,3 @@ Base64 encoded null byte - `AA==`
 | *Modification of JWT and signing it with earlier created symmetric key - access to admin panel* |
 |![](Images/image-43.png)|
 | *Deletion of user carlos* |
-![alt text](image-43.png)
