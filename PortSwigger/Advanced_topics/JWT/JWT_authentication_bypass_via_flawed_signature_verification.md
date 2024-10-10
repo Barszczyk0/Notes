@@ -1,6 +1,6 @@
 # JWT authentication bypass via flawed signature verification
 # Objective
- This lab uses a JWT-based mechanism for handling sessions. The server is insecurely configured to accept unsigned JWTs.\
+This lab uses a JWT-based mechanism for handling sessions. The server is insecurely configured to accept unsigned JWTs.\
 To solve the lab, modify your session token to gain access to the admin panel at `/admin`, then delete the user `carlos`.\
 You can log in to your own account using the following credentials: `wiener:peter`
 
@@ -12,6 +12,8 @@ The website in this lab uses JWT to handle different users. If client (attacker)
 | *JWT* |
 |![](Images/image-10.png)|
 | *JWT contents* |
+
+There is `/admin` endpoint that returns `HTTP 401 Unauthorized`.
 
 ## Exploitation
 

@@ -8,7 +8,9 @@ You can log in to your own account using the following credentials: `wiener:pete
 The website in this lab uses JWT to handle different users. If JWT secret is weak, attacker could brute-force the secret.
 |![](Images/image-16.png)|
 |:--:| 
-| *JWTs on this website are sighned using HS256* |
+| *JWT contents - JWTs on this website are signed using HS256* |
+
+There is `/admin` endpoint that returns `HTTP 401 Unauthorized`.
 
 ## Brute-force secret
 Command:
