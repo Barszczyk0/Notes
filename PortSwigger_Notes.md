@@ -190,3 +190,5 @@
 - [JWT authentication bypass via flawed signature verification](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_flawed_signature_verification.md)
 - [JWT authentication bypass via weak signing key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_weak_signing_key.md)
 - [JWT authentication bypass via jwk header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jwk_header_injection.md)
+- [JWT authentication bypass via jku header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jku_header_injection.md)
+- [JWT authentication bypass via kid header path traversal](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_kid_header_path_traversal.md)
