@@ -27,7 +27,6 @@ Using `jku` header attacker can force vulnerable server to use attacker controll
 4. Modify JWT
 5. Sign JWT using his private key
 
-
 |![](Images/image-34.png)|
 |:--:| 
 | *Generation of new RSA key* |

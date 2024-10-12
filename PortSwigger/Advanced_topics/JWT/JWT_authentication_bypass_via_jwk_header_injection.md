@@ -20,7 +20,8 @@ There is `/admin` endpoint that returns `HTTP 401 Unauthorized`.
 ```
 JWK (JSON Web Key) - Provides an embedded JSON object representing the key. 
 ```
-According to the JWS specification, only the `alg` header parameter is mandatory. By using extra header `jwk`, attacker can add his own public RSA key and sign message with his matching private RSA key. Misconfigured server might use key that's embedded in the jwk parameter to verify token.
+
+According to the JWS specification, only the `alg` header parameter is mandatory. By using extra header `jwk`, attacker can add his own public RSA key and sign message with his matching private key. Misconfigured server may use key that's embedded in the jwk parameter to verify token.
 
 |![](Images/image-25.png)|
 |:--:| 

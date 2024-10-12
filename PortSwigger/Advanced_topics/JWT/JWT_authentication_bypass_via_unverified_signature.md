@@ -25,7 +25,6 @@ The website in this lab uses JWT to handle different users. If JWT signature is 
 
 There is `/admin` endpoint that returns `HTTP 401 Unauthorized`.
 
-
 ## Exploitation
 
 |![](Images/image-4.png)|
