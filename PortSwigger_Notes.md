@@ -89,6 +89,8 @@
 ## Race conditions
 - [Limit overrun race conditions](/PortSwigger/Server_Side/Race_Conditions/Limit_overrun_race_conditions.md)
 - [Bypassing rate limits via race conditions](/PortSwigger/Server_Side/Race_Conditions/Bypassing_rate_limits_via_race_conditions.md)
+- [Multi-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Multi-endpoint_race_conditions.md)
+- [Single-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Single-endpoint_race_conditions.md)
 
 ## NoSQL injection
 - [Detecting NoSQL injection](/PortSwigger/Server_Side/NoSQL_injection/Detecting_NoSQL_injection.md)
