@@ -98,6 +98,9 @@
 - [Exploiting NoSQL injection to extract data](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_injection_to_extract_data.md)
 - [Exploiting NoSQL operator injection to extract unknown fields](/PortSwigger/Server_Side/NoSQL_injection/Exploiting_NoSQL_operator_injection_to_extract_unknown_fields.md)
 
+## API testing
+- [Exploiting an API endpoint using documentation](/PortSwigger/Server_Side/API_testing/Exploiting_an_API_endpoint_using_documentation.md)
+- [Finding and exploiting an unused API endpoint](/PortSwigger/Server_Side/API_testing/Finding_and_exploiting_an_unused_API_endpoint.md)
 
 # Client-Side Topics
 ## Cross-site scripting (XXS)
