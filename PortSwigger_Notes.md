@@ -101,6 +101,7 @@
 ## API testing
 - [Exploiting an API endpoint using documentation](/PortSwigger/Server_Side/API_testing/Exploiting_an_API_endpoint_using_documentation.md)
 - [Finding and exploiting an unused API endpoint](/PortSwigger/Server_Side/API_testing/Finding_and_exploiting_an_unused_API_endpoint.md)
+- [Exploiting a mass assignment vulnerability](/PortSwigger/Server_Side/API_testing/Exploiting_a_mass_assignment_vulnerability.md)
 
 # Client-Side Topics
 ## Cross-site scripting (XXS)
@@ -201,3 +202,4 @@
 - [JWT authentication bypass via jwk header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jwk_header_injection.md)
 - [JWT authentication bypass via jku header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jku_header_injection.md)
 - [JWT authentication bypass via kid header path traversal](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_kid_header_path_traversal.md)
+- [JWT authentication bypass via algorithm confusion](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion.md)
