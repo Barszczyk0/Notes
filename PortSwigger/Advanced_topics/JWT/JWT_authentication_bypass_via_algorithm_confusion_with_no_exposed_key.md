@@ -1,20 +1,21 @@
-# JWT authentication bypass via algorithm confusion
-
+# JWT authentication bypass via algorithm confusion with no exposed key
 # Objective
 This lab uses a JWT-based mechanism for handling sessions. It uses a robust RSA key pair to sign and verify tokens. However, due to implementation flaws, this mechanism is vulnerable to algorithm confusion attacks.
 
-To solve the lab, first obtain the server's public key. This is exposed via a standard endpoint. Use this key to sign a modified session token that gives you access to the admin panel at `/admin`, then delete the user `carlos`.
+To solve the lab, first obtain the server's public key. Use this key to sign a modified session token that gives you access to the admin panel at /admin, then delete the user carlos.
 
 You can log in to your own account using the following credentials: `wiener:peter`
 
 # Solution
 ## Analysis
 
-On the website there is `/jwks.json` file accesible.
+On the website there no `/jwks.json` or `/.well-known/jwks.json` file accesible.
 
-|![](Images/image-44.png)|
+|![](Images/image-51.png)|
 |:--:| 
-| *Public key* |
+| *No public key is accessible* |
+|![](Images/image-54.png)|
+| *Standard user request after login with JWT* |
 
 ## Exploitation
 ### Explaination of algorithm confusion attack
@@ -41,36 +42,25 @@ token = request.getCookie("session");
 verify(token, publicKey);
 ```
 
-### Performing an algorithm confusion attack
+### Performing an algorithm confusion attack without public key
 In order to exploit algorithm confusion attacker has to:
-1. Obtain the server's public key
-2. Convert the public key to a suitable format
+1. Derive public keys from existing 2 JWT tokens
+2. Verify that one of tampered JWT works
 3. Create a malicious JWT with a modified payload and the alg header set to HS256.
 4. Sign the token with HS256, using the public key as the secret. 
 
-Obtained public keys:
-```json
-{
-    "kty":"RSA",
-    "e":"AQAB",
-    "use":"sig",
-    "kid":"90580691-9aeb-41c7-813e-e6ee4352b798",
-    "alg":"RS256","n":"oQVeLj52qKW-eG2HMd5iVeO8TU8iJmcHLmnvzWVFsyDt1LybFqjCcFI8BeorylnltWQSX12TZMKJYv8EFdUZOPDMwGDJCte0jUAoqLJBgoI3vDdbvJY7InalR1fhr9UQnQQf_y4maOxvMX39vY6DO2xAPk4FZyEajp1gWPMkYZWedQMIh10VRk7d53kU-cZJAQ7Fxbz7bFYptkI3Hq8_PVuJDyaRWNPJlbhTmUMibEe9ErB_JviPptwmOFeo4BcHSVU-h8gpNvqMoI3KwBv_yF2nT4_GSvUr77mFSg_kZb27fzG4UvmjVntvW0d2nrhzHBLHcNihGZC4lD8M06ufzQ"
-}
-```
 
-|![](Images/image-45.png)|
+|![](Images/image-52.png)|
 |:--:| 
-| *Creation of Public key using obtained earlier public key* |
-|![](Images/image-46.png)|
-| *Copying created public key as PEM* |
-|![](Images/image-47.png)|
-| *Base64 encoding PEM public key* |
-|![](Images/image-48.png)|
-| *Creating symmetric key from Base64 encoded public key - Modification of the k value (key size does not matter)* |
-|![](Images/image-49.png)|
-| *Modification and signing JWT token using created symmetric key - request to /admin* |
-|![](Images/image-50.png)|
-| *Deletion of user carlos* |
+| *Deriving public keys from existing tokens* |
+|![](Images/image-53.png)|
+| *Testing tampered JWT - JWT passed successfuly* |
 
+|![](Images/image-55.png)|
+|:--:| 
+| *Creating symmetric key from Base64 encoded x509 public key* |
+|![](Images/image-56.png)|
+| *Modification and signing JWT token using created symmetric key - request to /admin* |
+|![](Images/image-57.png)|
+| *Deletion of user carlos* |
 
