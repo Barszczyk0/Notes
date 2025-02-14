@@ -208,3 +208,4 @@
 - [JWT authentication bypass via jku header injection](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_jku_header_injection.md)
 - [JWT authentication bypass via kid header path traversal](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_kid_header_path_traversal.md)
 - [JWT authentication bypass via algorithm confusion](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion.md)
+- [JWT authentication bypass via algorithm confusion with no exposed key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion_with_no_exposed_key.md)
