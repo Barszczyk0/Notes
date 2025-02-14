@@ -100,6 +100,7 @@
 
 ## API testing
 - [Exploiting an API endpoint using documentation](/PortSwigger/Server_Side/API_testing/Exploiting_an_API_endpoint_using_documentation.md)
+- [Exploiting server-side parameter pollution in a query string](/PortSwigger/Server_Side/API_testing/Exploiting_server_side_parameter_pollution_in_a_query_string.md)
 - [Finding and exploiting an unused API endpoint](/PortSwigger/Server_Side/API_testing/Finding_and_exploiting_an_unused_API_endpoint.md)
 - [Exploiting a mass assignment vulnerability](/PortSwigger/Server_Side/API_testing/Exploiting_a_mass_assignment_vulnerability.md)
 
@@ -140,6 +141,10 @@
 
 ## Clickjacking
 - [Basic clickjacking with CSRF token protection](/PortSwigger/Client_Side/Clickjacking/Basic_clickjacking_with_CSRF_token_protection.md)
+
+## DOM-based vulnerabilities
+- [DOM XSS using web messages](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM_XSS_using_web_messages.md)
+- [DOM XSS using web messages and a JavaScript URL](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM_XSS_using_web_messages_and_a_JavaScript_URL.md)
 
 ## Cross-origin resource sharing (CORS)
 - [CORS vulnerability with basic origin reflection](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_basic_origin_reflection.md)
