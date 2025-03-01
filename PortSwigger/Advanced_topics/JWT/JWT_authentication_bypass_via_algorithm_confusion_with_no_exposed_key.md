@@ -2,7 +2,7 @@
 # Objective
 This lab uses a JWT-based mechanism for handling sessions. It uses a robust RSA key pair to sign and verify tokens. However, due to implementation flaws, this mechanism is vulnerable to algorithm confusion attacks.
 
-To solve the lab, first obtain the server's public key. Use this key to sign a modified session token that gives you access to the admin panel at /admin, then delete the user carlos.
+To solve the lab, first obtain the server's public key. Use this key to sign a modified session token that gives you access to the admin panel at `/admin`, then delete the user carlos.
 
 You can log in to your own account using the following credentials: `wiener:peter`
 
@@ -19,7 +19,7 @@ On the website there no `/jwks.json` or `/.well-known/jwks.json` file accesible.
 
 ## Exploitation
 ### Explaination of algorithm confusion attack
-The idea behind of algorithm confusion is that in certain circumstances (bad implementan) public key may be treated by server as symmetric key. Attacker can bypass token validation by: modifying algorithm filed to symmetric algorithm, taking public key and using it to sign JWT token.
+The idea behind of algorithm confusion is that in certain circumstances (bad implementan) public key may be treated by server as symmetric key. Attacker can bypass token validation by: modifying algorithm field to symmetric algorithm, taking public key and using it to sign JWT token.
 
 Full explaination - [PortSwigger](https://portswigger.net/web-security/jwt/algorithm-confusion).
 ```js
@@ -46,8 +46,8 @@ verify(token, publicKey);
 In order to exploit algorithm confusion attacker has to:
 1. Derive public keys from existing 2 JWT tokens
 2. Verify that one of tampered JWT works
-3. Create a malicious JWT with a modified payload and the alg header set to HS256.
-4. Sign the token with HS256, using the public key as the secret. 
+3. Create a malicious JWT with a modified payload and the `alg` header set to `HS256`.
+4. Sign the token with `HS256`, using the public key as the secret. 
 
 
 |![](Images/image-52.png)|

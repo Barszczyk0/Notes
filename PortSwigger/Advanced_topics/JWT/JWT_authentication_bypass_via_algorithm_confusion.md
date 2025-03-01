@@ -18,7 +18,7 @@ On the website there is `/jwks.json` file accesible.
 
 ## Exploitation
 ### Explaination of algorithm confusion attack
-The idea behind of algorithm confusion is that in certain circumstances (bad implementan) public key may be treated by server as symmetric key. Attacker can bypass token validation by: modifying algorithm filed to symmetric algorithm, taking public key and using it to sign JWT token.
+The idea behind of algorithm confusion is that in certain circumstances (bad implementan) public key may be treated by server as symmetric key. Attacker can bypass token validation by: modifying algorithm field to symmetric algorithm, taking public key and using it to sign JWT token.
 
 Full explaination - [PortSwigger](https://portswigger.net/web-security/jwt/algorithm-confusion).
 ```js
@@ -45,8 +45,8 @@ verify(token, publicKey);
 In order to exploit algorithm confusion attacker has to:
 1. Obtain the server's public key
 2. Convert the public key to a suitable format
-3. Create a malicious JWT with a modified payload and the alg header set to HS256.
-4. Sign the token with HS256, using the public key as the secret. 
+3. Create a malicious JWT with a modified payload and the `alg` header set to `HS256`.
+4. Sign the token with `HS256`, using the public key as the secret. 
 
 Obtained public keys:
 ```json
