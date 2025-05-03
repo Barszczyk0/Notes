@@ -1,5 +1,5 @@
 # Registry
-[Windows Forensic Information](Forensic.md)
+[Windows Forensic Information](Forensics.md)
 ```mermaid
 mindmap
   root(Windows Registry)
