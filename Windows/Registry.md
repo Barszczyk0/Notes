@@ -2,7 +2,7 @@
 [Windows Forensic Information](Forensic.md)
 ```mermaid
 mindmap
-  root((Windows Registry Root Keys))
+  root(Windows Registry)
     HKEY_CLASSES_ROOT
     HKEY_CURRENT_USER
     HKEY_LOCAL_MACHINE
@@ -21,7 +21,7 @@ mindmap
 # Registry hives location
 ```mermaid
 mindmap
-    root((Hives Location))
+    root(Hives Location)
         C:\Windows\System32\Config\
             DEFAULT 
             SAM 

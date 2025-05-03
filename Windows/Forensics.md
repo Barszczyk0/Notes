@@ -3,7 +3,7 @@
 ## Registry map
 ```mermaid
 mindmap
-    root((Windows Registry Hive))
+    root(Windows Registry Hive)
         SAM
             SAM\Domains\Account\Users
         SOFTWARE
