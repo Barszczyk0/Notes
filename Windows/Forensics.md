@@ -54,7 +54,7 @@ mindmap
 Data acquisition: FTK Imager, Autopsy, KAPE\
 Data analysis: FTK Imager, Autopsy,
 Registry hives analysis:  Registry Explorer, RegRipper, ShellBag Explorer, AppCompatCacheParser\
-Registry hives analysis: RECmd, PECmd, WxTCmd, JLECmd\
+Registry hives analysis: RECmd, PECmd, WxTCmd, JLECmd, LECmd\
 NTFS analysis: MFTECmd\
 Data viewer: EZ Viewer, TimeLine Explorer
 
@@ -140,7 +140,20 @@ First/Last conncetion times:
 | First/Last Times | SYSTEM\CurrentControlSet\Enum\USBSTOR\Ven_Prod_Version\USBSerial#\Properties\\{DISK_ID}\\#### |
 | USB device Volume Name | SOFTWARE\Microsoft\Windows Portable Devices\Devices |
 
+The file `C:\Windows\inf\setupapi.dev.log` is a Windows setup log file that records detailed information about device driver installations and updates.
 
+Shortcut files can provide information about connected USB devices. It can provide information about the volume name, type, and serial number. 
+```
+C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Recent\
+C:\Users\<username>\AppData\Roaming\Microsoft\Office\Recent\
+```
+
+### Shortcut files
+Shortcut files contain information about the first and last opened times of the file and the path of the opened file, along with some other data. Windows creates a shortcut file for each file opened either locally or remotely. 
+```
+C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Recent\
+C:\Users\<username>\AppData\Roaming\Microsoft\Office\Recent\
+```
 
 ## Forensic tools for registry hives analysis
 
@@ -162,7 +175,7 @@ kape.exe --tsource C: --target KapeTriage --tdest C:\Users\thm-4n6\Desktop\Targe
 `RegRipper` (rr.exe) is used to extract, parse, and analyze registry data from offline Windows registry hive files like NTUSER.DAT, SYSTEM, SOFTWARE, SAM. It outputs data in .csv format. It does not automatically process hive transaction logs. 
 
 ### RECmd
-`RECmd` (Registry) - tool for querying, parsing, and analyzing registry hives.
+`RECmd` (Registry Explorer Command Line) - tool for querying, parsing, and analyzing registry hives.
 
 Command:
 ```
@@ -179,7 +192,7 @@ Options:
 ```
 
 ### PECmd
-`PECmd`(Prefetch Parser) - tool for parsing Prefetch files and extracting data from them.
+`PECmd` (Prefetch Explorer Command Line) - tool for parsing Prefetch files and extracting data from them.
 
 Location of prefetch files:
 ```
@@ -192,7 +205,7 @@ PECmd.exe -d <path-to-Prefetch-directory> --csv <path-to-save-csv>
 ```
 
 ### WxTCmd
-`WxTCmd` (Windows Timeline) - tool for parsing Windows 10 Timeline feature database. Windows 10 stores recently used applications and files in an SQLite database called the Windows 10 Timeline. This data can be a source of information about the last executed programs. It contains the application that was executed and the focus time of the application.
+`WxTCmd` (Windows Timeline Explorer Command Line) - tool for parsing Windows 10 Timeline feature database. Windows 10 stores recently used applications and files in an SQLite database called the Windows 10 Timeline. This data can be a source of information about the last executed programs. It contains the application that was executed and the focus time of the application.
 
 Location of Windows Timeline files:
 ```
@@ -204,7 +217,7 @@ WxTCmd.exe -f <path-to-Timeline-file> --csv <path-to-save-csv>
 ```
 
 ### JLECmd
-`JLECmd` (Windows Jump Lists) - tool for parsing Windows Jump List. Windows introduced jump lists to help users go directly to their recently used files from the taskbar.Jumplists can be viewed by right-clicking an application's icon in the taskbar, and it will show the recently opened files in that application.
+`JLECmd` (Windows Jump Lists Explorer Command Line) - tool for parsing Windows Jump List. Windows introduced jump lists to help users go directly to their recently used files from the taskbar.Jumplists can be viewed by right-clicking an application's icon in the taskbar, and it will show the recently opened files in that application.
 
 Location of Windows Jump Lists:
 ```
@@ -215,8 +228,21 @@ Command:
 JLECmd.exe -f <path-to-Jumplist-file> --csv <path-to-save-csv>
 ```
 
+### LECmd
+`LECmd` (Link Explorer Command Line) - tool for parsing and analysing Windows .lnk (shortcut) files.
+
+Location of link files:
+```
+C:\Users\<username>\AppData\Roaming\Microsoft\Windows\Recent\
+C:\Users\<username>\AppData\Roaming\Microsoft\Office\Recent\
+```
+Comand:
+```
+LECmd.exe -f <path-to-shortcut-files> --csv <path-to-save-csv>
+```
+
 ### AmCache parser
-`AmcacheParser` gathers information about all the Program entries, then looks at all the File entries. In each file entry is a pointer to a Program ID (value 100). If this Program ID exists in Program entries, the File entry is associated with the Program entry.
+`AmcacheParser` - tool that gathers information about all the Program entries, then looks at all the File entries. In each file entry is a pointer to a Program ID (value 100). If this Program ID exists in Program entries, the File entry is associated with the Program entry.
 
 Location of Amcache.hve:
 ```
@@ -308,6 +334,7 @@ Useful attributes (Update Reasons in `$J`):
 
 ## Forensic tools for NTFS analysis
 ### MFTECmd
+`MFTECmd` (MFT Explorer Command Line) - tool for parsing NTFS file systems.
 
 ```
 MFTECmd.exe -f <path-to-$MFT> --csv ..\Output\ --csvf MFT.csv
@@ -318,6 +345,12 @@ Offset, FromSlack, SelfMftEntry, SelfMftSequence, FileName, Flags, NameType, Par
 
 MFTECmd.exe -f <path-to-$J> --csv ..\Output\ --csvf USNJrnl.csv
 Name, Extension, EntryNumber, SequenceNumber, ParentEntryNumber, ParentSequenceNumber, ParentPath, UpdateSequenceNumber, UpdateTimestamp, UpdateReasons, FileAttributes, OffsetToData, SourceFile
+```
+
+## IE/Edge history
+IE/Edge history includes browsing history and opened files by browser (file:///*). Records can be viewed in Autopsy or FTKImager. It is stored in:
+```
+C:\Users\<username>\AppData\Local\Microsoft\Windows\WebCache\WebCacheV*.dat
 ```
 
 ## Forensic analysis of powershell history
