@@ -1,37 +1,48 @@
 # Volatility
 ## Basics
 ```
-vol --help
-vol -f memorydump.mem --help
+vol -h
+vol -f dump.mem <os>.<module> -h
 ```
 
 ```
-vol -f memorydump.mem windows.info
-vol -f memorydump.mem linux.info
-vol -f memorydump.mem mac.info
+vol -f dump.mem windows.info
+vol -f dump.mem linux.info
+vol -f dump.mem mac.info
 ```
 
 ## Gathering information
 ```
-vol -f memorydump.mem windows.info                              --> Show system information
-vol -f memorydump.mem windows.netscan                           --> Scan for network objects
-vol -f memorydump.mem windows.netstat                           --> Show active and closed TCP/UDP connections, associated process IDs, local and remote ports, and IPs
-vol -f memorydump.mem windows.pslist                            --> List processes list
-vol -f memorydump.mem windows.pstree                            --> Show processes tree
-vol -f memorydump.mem windows.psscan                            --> Find hidden processes (evasion countermeasures)
-vol -f memorydump.mem windows.handles                           --> Show handles
-vol -f memorydump.mem windows.filescan                          --> Look for file objects
-vol -f memorydump.mem windows.ssdt                              --> Resolve addresses for system calls based on SSDT
-vol -f memorydump.mem windows.modules                           --> List drivers and kernel modules currently loaded into memory
-vol -f memorydump.mem windows.driverscan                        --> Scan raw memory for DRIVER_OBJECT structures 
-vol -f memorydump.mem windows.mftscan.MFTScan                   --> Scan alternate data streams
-vol -f memorydump.mem windows.memmap -o . --dump --pid 1234     --> Dump process memory
-vol -f memorydump.mem windows.dlllist                           --> Show DLLs used
-vol -f memorydump.mem windows.dlllist | grep -vi system32       --> Show more interestings DLLs
-vol -f memorydump.mem windows.malfind                           --> Look for code injections
-vol -f memorydump.mem windows.vadinfo                           --> Display detailed information about virtual memory descriptors,
-vol -f memorydump.mem windows.yarascan                          --> Use YARA rules
-vol -f memorydump.mem windows.cmdline                           --> Look for command line arguments
+vol -f dump.mem windows.info                              --> Show system information
+vol -f dump.mem windows.netscan                           --> Scan for network objects
+vol -f dump.mem windows.netstat                           --> Show active and closed TCP/UDP connections, associated process IDs, local and remote ports, and IPs
+vol -f dump.mem windows.pslist                            --> List processes list
+vol -f dump.mem windows.pstree                            --> Show processes tree
+vol -f dump.mem windows.psscan                            --> Find hidden processes (evasion countermeasures)
+vol -f dump.mem windows.psxview                           --> Find hidden processes (cross-references)
+vol -f dump.mem windows.handles                           --> Show handles
+vol -f dump.mem windows.filescan                          --> Look for file objects
+vol -f dump.mem windows.ssdt                              --> Resolve addresses for system calls based on SSDT
+vol -f dump.mem windows.modules                           --> List drivers and kernel modules currently loaded into memory
+vol -f dump.mem windows.driverscan                        --> Scan raw memory for DRIVER_OBJECT structures 
+vol -f dump.mem windows.mftscan.MFTScan                   --> Scan alternate data streams
+vol -f dump.mem windows.dlllist                           --> Show DLLs used
+vol -f dump.mem windows.dlllist --pid 1234                --> Show DLLs for PID or name (regex)
+vol -f dump.mem windows.dlllist | grep -vi system32       --> Show more interestings DLLs
+vol -f dump.mem windows.malfind                           --> Look for code injections
+vol -f dump.mem windows.vadinfo                           --> Display detailed information about virtual memory descriptors,
+vol -f dump.mem windows.yarascan                          --> Use YARA rules
+vol -f dump.mem windows.cmdline                           --> Look for command line arguments
+```
+
+## Dumping files
+```
+vol -f dump.mem -o output windows.memmap --dump --pid 1234         --> Dump process memory segments
+vol -f dump.mem -o output windows.dlllist --dump --pid 1234        --> Dump all DLLs used by prosses with PID or with name (regex)
+vol -f dump.mem -o output windows.dumpfiles --dump --pid 1234      --> Dump files related to PID
+ll outoput | grep -Ei ".exe|.dat"                                              --> Filter dumped files
+ll outoput | grep -Ei ".docx|.xlsx|.pptx"                                      --> Filter dumped files
+ll outoput | grep -Ei ".docm|.dotm|.xlsm|.xltm|.xlsb|.pptm|.potm|.ppsm"        --> Filter dumped files
 ```
 
 ## Extra information
@@ -46,6 +57,8 @@ The `_EPROCESS` structure holds all the information the Windows kernel needs to 
 - Memory layout, including VADs
 - Handle tables
 - Loaded modules (DLLs, EXEs)
+
+`psxview` does multiple tests in one and cross-reference the results. This module includes visibility checks in other modules `pslist`, `psscan`, `thrdscan`. Moreover `psxview` provides information about exit time and presence of handles to CSRSS. CSRSS (Client/Server Runtime Subsystem) is responsible for handling the user-mode side of the Win32 subsystem. It plays a key role in console window management, process/thread creation, and shutdown operations. There are usually two instances of csrss.exe running: one for Session 0 (system processes and services) and one for the current user session. Legitimate user processes often hold handles to csrss.exe because it's essential for process/thread interaction. If a process is not linked to CSRSS, or CSRSS is missing or tampered with, it's a strong indicator of process hiding attempt.
 
 ### SSDT Hook Detection
 SSDT stands for System Service Descriptor Table. It’s a critical kernel data structure that maps system calls made by user-mode applications to the corresponding kernel-mode functions. Rootkits may overwrite SSDT entries to redirect legitimate system calls to their malicious counterparts.
