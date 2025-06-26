@@ -14,6 +14,7 @@ vol -f dump.mem mac.info
 ## Gathering information
 ```
 vol -f dump.mem windows.info                              --> Show system information
+vol -f dump.mem windows.sessions                          --> Lists all active user sessions
 vol -f dump.mem windows.netscan                           --> Scan for network objects
 vol -f dump.mem windows.netstat                           --> Show active and closed TCP/UDP connections, associated process IDs, local and remote ports, and IPs
 vol -f dump.mem windows.pslist                            --> List processes list
@@ -22,6 +23,8 @@ vol -f dump.mem windows.psscan                            --> Find hidden proces
 vol -f dump.mem windows.psxview                           --> Find hidden processes (cross-references)
 vol -f dump.mem windows.handles                           --> Show handles
 vol -f dump.mem windows.filescan                          --> Look for file objects
+vol -f dump.mem windows.registry.hivelist                 --> List registry hives that were loaded in memory
+vol -f dump.mem windows.registry.userassist               --> List with which programs a user interacted with through the graphical interface
 vol -f dump.mem windows.ssdt                              --> Resolve addresses for system calls based on SSDT
 vol -f dump.mem windows.modules                           --> List drivers and kernel modules currently loaded into memory
 vol -f dump.mem windows.driverscan                        --> Scan raw memory for DRIVER_OBJECT structures 
@@ -42,7 +45,7 @@ vol -f dump.mem -o output windows.dlllist --dump --pid 1234        --> Dump all 
 vol -f dump.mem -o output windows.dumpfiles --dump --pid 1234      --> Dump files related to PID
 ll outoput | grep -Ei ".exe|.dat"                                              --> Filter dumped files
 ll outoput | grep -Ei ".docx|.xlsx|.pptx"                                      --> Filter dumped files
-ll outoput | grep -Ei ".docm|.dotm|.xlsm|.xltm|.xlsb|.pptm|.potm|.ppsm"        --> Filter dumped files
+ll outoput | grep -Ei ".dotm|.docm|.xlsm|.xltm|.xlsb|.pptm|.potm|.ppsm"        --> Filter dumped files
 ```
 
 ## Extra information
