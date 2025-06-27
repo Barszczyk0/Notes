@@ -33,8 +33,13 @@ vol -f dump.mem windows.dlllist --pid 1234                --> Show DLLs for PID 
 vol -f dump.mem windows.dlllist | grep -vi system32       --> Show more interestings DLLs
 vol -f dump.mem windows.malfind                           --> Look for code injections
 vol -f dump.mem windows.vadinfo                           --> Display detailed information about virtual memory descriptors,
-vol -f dump.mem windows.yarascan                          --> Use YARA rules
 vol -f dump.mem windows.cmdline                           --> Look for command line arguments
+```
+## Scanning files with YARA rules
+```
+vol -f dump.mem yarascan.YaraScan --yara-string YARA_STRING
+vol -f dump.mem yarascan.YaraScan --yara-file YARA_FILE
+vol -f dump.mem windows.vadyarascan --pid 1234 --yara-file YARA_FILE
 ```
 
 ## Dumping files
