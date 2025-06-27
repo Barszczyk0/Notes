@@ -7,8 +7,7 @@ vol -f dump.mem <os>.<module> -h
 
 ```
 vol -f dump.mem windows.info
-vol -f dump.mem linux.info
-vol -f dump.mem mac.info
+vol -f dump.mem banners.Banners
 ```
 
 ## Gathering information
