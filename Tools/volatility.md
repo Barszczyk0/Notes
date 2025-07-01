@@ -20,6 +20,7 @@ vol -f dump.mem windows.pslist                            --> List processes lis
 vol -f dump.mem windows.pstree                            --> Show processes tree
 vol -f dump.mem windows.psscan                            --> Find hidden processes (evasion countermeasures)
 vol -f dump.mem windows.psxview                           --> Find hidden processes (cross-references)
+vol -f dump.mem windows.getsids --pid 1234                --> Print the SIDs owning each process
 vol -f dump.mem windows.handles                           --> Show handles
 vol -f dump.mem windows.filescan                          --> Look for file objects
 vol -f dump.mem windows.registry.hivelist                 --> List registry hives that were loaded in memory
