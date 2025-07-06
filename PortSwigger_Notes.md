@@ -163,6 +163,7 @@
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
 
 ## GraphQL API vulnerabilities
+- [GraphQL Cheat Sheet](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/GraphQL_cheat_sheet.md)
 - [Accessing private GraphQL posts](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Accessing_private_GraphQL_posts.md)
 - [Accidental exposure of private GraphQL fields](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Accidental_exposure_of_private_GraphQL_fields.md)
 - [Finding a hidden GraphQL endpoint](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Finding_a_hidden_GraphQL_endpoint.md)
