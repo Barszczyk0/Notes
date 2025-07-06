@@ -162,6 +162,13 @@
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
 
+## GraphQL API vulnerabilities
+- [Accessing private GraphQL posts](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Accessing_private_GraphQL_posts.md)
+- [Accidental exposure of private GraphQL fields](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Accidental_exposure_of_private_GraphQL_fields.md)
+- [Finding a hidden GraphQL endpoint](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Finding_a_hidden_GraphQL_endpoint.md)
+- [Bypassing GraphQL brute force protections](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Bypassing_GraphQL_brute_force_protections.md)
+- [Performing CSRF exploits over GraphQL](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Performing_CSRF_exploits_over_GraphQL.md)
+
 ## Server-side template injection
 - [Server-side template injection - Cheat Sheet](/PortSwigger/Advanced_topics/Server-side_template_injection/SSTI_cheat_cheet.md)
 - [Basic server-side template injection](/PortSwigger/Advanced_topics/Server-side_template_injection/Basic_server-side_template_injection.md)
