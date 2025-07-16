@@ -109,6 +109,7 @@
 - [Exploiting path delimiters for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_path_delimiters_for_web_cache_deception.md)
 - [Exploiting origin server normalization for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_origin_server_normalization_for_web_cache_deception.md)
 - [Exploiting cache server normalization for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_cache_server_normalization_for_web_cache_deception.md)
+- [Exploiting exact-match cache rules for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_exact-match_cache_rules_for_web_cache_deception.md)
 
 # Client-Side Topics
 ## Cross-site scripting (XXS)
