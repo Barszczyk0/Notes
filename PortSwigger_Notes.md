@@ -104,6 +104,12 @@
 - [Finding and exploiting an unused API endpoint](/PortSwigger/Server_Side/API_testing/Finding_and_exploiting_an_unused_API_endpoint.md)
 - [Exploiting a mass assignment vulnerability](/PortSwigger/Server_Side/API_testing/Exploiting_a_mass_assignment_vulnerability.md)
 
+## Web cache deception
+- [Exploiting path mapping for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_path_mapping_for_web_cache_deception.md)
+- [Exploiting path delimiters for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_path_delimiters_for_web_cache_deception.md)
+- [Exploiting origin server normalization for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_origin_server_normalization_for_web_cache_deception.md)
+- [Exploiting cache server normalization for web cache deception](/PortSwigger/Server_Side/Web_cache_deception/Exploiting_cache_server_normalization_for_web_cache_deception.md)
+
 # Client-Side Topics
 ## Cross-site scripting (XXS)
 - [Reflected XSS into HTML context with nothing encoded](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_nothing_encoded.md)
