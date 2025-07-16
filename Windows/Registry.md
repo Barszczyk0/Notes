@@ -1,5 +1,8 @@
 # Registry
+The [registry](https://learn.microsoft.com/en-us/windows/win32/sysinfo/structure-of-the-registry) is a hierarchical database that contains data that is critical for the operation of Windows and the applications and services that run on Windows. A [hive](https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-hives) is a logical group of keys, subkeys, and values in the registry that has a set of supporting files loaded into memory when the operating system is started or a user logs in.
+
 [Windows Forensic Information](Forensics.md)
+
 ```mermaid
 mindmap
   root(Windows Registry)
@@ -10,7 +13,7 @@ mindmap
     HKEY_CURRENT_CONFIG
 ```
 
-| Registry | Acronym | Short description |
+| Root key | Acronym | Short description |
 | :--------: | :----: | :------- |
 | HKEY_CLASSES_ROOT | HKCR | Contains information that makes sure that the correct program opens when you open a file by using Windows Explorer.|
 | HKEY_CURRENT_USER | HKCU | Contains settings and configuration specifically for the currently logged-in user. |
