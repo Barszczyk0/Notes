@@ -21,66 +21,31 @@ ctrl-e - go to the end of the line
 ctrl-r - reverse search
 ```
 
-### Misc
+## Commands - Enumeration
+### List of users and privileges
 ```
-type -a echo
-alias echo='echo foo'
-function echo() { command echo bar "$@"; }
-
-command - Execute shell builtin
-sudo - Runs external command and not shell builtin
-echo -e - Special sequences are recognized
+sudo -l
+ls /home
+cat /etc/passwd | grep -v '/nologin' | cut -d: -f1
 ```
 
-## Bash Scripting
-### Accessing files in directory
-```bash
-for f in ./files/*; do
-	echo "File $f"
-done
+### Environment variables
+```
+env 
+echo $PATH
 ```
 
-### Listing arguments
-```bash
-for arg in "$@"; do
-	echo "<$arg>"
-done
+### Searching interesting/valuable files/information
+```
+getcap -r / 2>/dev/null
+find / -perm -4000 -type f 2>/dev/null
+find / \( -user root -o -user ubuntu \) 2>/dev/null
+find / -type f \( -name "*pass*" -o -name "*key*" -o -name "*.conf" \) 2>/dev/null
+grep -r "." /etc/cron* 2>/dev/null
 ```
 
-### Reading data line by line
-```bash
-while IFS=: read -r name id desc; do
-	echo "$id: $name is $desc"
-done < data.txt
+### Checking open/listening ports
 ```
-
-Example data.txt
-```
-Name1:001:desc1
-Name2:002:d e s c 2 
-```
-
-### Regex
-```bash
-regex='^()()$'      # Demo - Match groups
-for f in ./files/*; do
-	if [[ $f =~ $regex ]]; then
-		var1=${BASH_REMATCH[1]}
-		var2=${BASH_REMATCH[2]}
-		echo "$var1: $var2"
-	fi
-done
-```
-
-
-### Printing time
-```bash
-date +'The time is %H:%M:%S'
-printf '%T\n'
-printf '%()T\n'
-printf '%(%H:%M:%S)T\n' -1  # Strftime
-
-date +%s
-echo $EPOCHSECONDS
-echo $EPOCHREALTIME
+ss -tulpn
+ps -eo pid,cmd --sort=-%mem | grep -v grep | while read pid cmd; do lsof -p $pid 2>/dev/null | grep -q 'IPv4' && echo "$pid $cmd"; done
 ```
