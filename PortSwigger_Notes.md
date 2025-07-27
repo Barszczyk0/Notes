@@ -173,6 +173,8 @@
  
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
+- [Exploiting vulnerabilities in LLM APIs](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_vulnerabilities_in_LLM_APIs.md)
+- [Indirect prompt injection](/PortSwigger/Advanced_topics/Web_LLM_attacks/Indirect_prompt_injection.md)
 
 ## GraphQL API vulnerabilities
 - [GraphQL Cheat Sheet](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/GraphQL_cheat_sheet.md)
