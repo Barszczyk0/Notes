@@ -1,4 +1,5 @@
 # Live Forensics of Windows System
+This file conatains information, instructions and tools how to perform forensics analysis on live system in order to find indicators of compromise.
 
 ## Forensic tools for live analysis
 [Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/)\
@@ -44,7 +45,7 @@ Get-Module | ft ModuleType, Version, Name
 Get-Module -ListAvailable | select ModuleType, Version, Name
 ```
 
-## System Profile
+## System Infromation
 ### System Name and Network Information
 List system and network information:
 ```powershell
@@ -52,7 +53,7 @@ Get-CimInstance win32_networkadapterconfiguration -Filter IPEnabled=TRUE | ft DN
 ```
 
 ### OS Version and Installation Details
-List OS Details
+List OS details:
 ```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | fl CSName, Version, BuildNumber, InstallDate, LastBootUpTime, OSArchitecture
 ```
@@ -73,18 +74,26 @@ Get-GPResultantSetOfPolicy -ReportType HTML -Path (Join-Path -Path (Get-Location
 ### Users
 List the Users:
 ```powershell
-Get-CimInstance -Class Win32_UserAccount -Filter "LocalAccount=True" | Format-Table  Name, PasswordRequired, PasswordExpires, PasswordChangeable | Tee-Object "user-details.txt"
+Get-CimInstance -Class Win32_UserAccount -Filter "LocalAccount=True" | Format-Table  Name, PasswordRequired, PasswordExpires, PasswordChangeable
 ```
 
 List the User Groups:
 ```powershell
-Get-LocalGroup | ForEach-Object { $members = Get-LocalGroupMember -Group $_.Name; if ($members) { Write-Output "`nGroup: $($_.Name)"; $members | ForEach-Object { Write-Output "`tMember: $($_.Name)" } } } | tee gp-members.txt
+Get-LocalGroup | ForEach-Object {
+    $members = Get-LocalGroupMember -Group $_.Name
+    if ($members) {
+        Write-Output "`nGroup: $($_.Name)"
+        $members | ForEach-Object {
+            Write-Output "`tMember: $($_.Name)"
+        }
+    }
+}
 ```
 
 ### Sessions
 List infroamtion about users sessions:
 ```powershell
-Get-LocalUser | select * | tee l-users.txt
+Get-LocalUser | select *
 ```
 
 List the Current Sessions:
@@ -140,17 +149,49 @@ User Configuration/Policies/Windows Settings/Scripts (Logon/Logoff)
 ### Active Ports and Connections
 GUI application - Resource Monitor: `resmon`
 
+Retrive hosts file:
+```powershell
+Get-Content C:\Windows\System32\Drivers\etc\hosts
+```
+
+Retrieve DNS cache:
+```
+Get-DnsClientCache | ? Entry -NotMatch "workst|servst|memes|kerb|ws|ocsp" | out-string -width 1000
+```
 
 List the TCP Connections:
 ```powershell
-Get-NetTCPConnection | select Local*, Remote*, State, OwningProcess,` @{n="ProcName";e={(Get-Process -Id $_.OwningProcess).ProcessName}},` @{n="ProcPath";e={(Get-Process -Id $_.OwningProcess).Path}} | sort State | ft -Auto | tee tcp-conn.txt
+Get-NetTCPConnection | select Local*, Remote*, State, OwningProcess,` @{n="ProcName";e={(Get-Process -Id $_.OwningProcess).ProcessName}},` @{n="ProcPath";e={(Get-Process -Id $_.OwningProcess).Path}} | sort State | ft -Auto
+
+Get-NetTCPConnection | select LocalAddress,localport,remoteaddress,remoteport,state,@{name="process";Expression={(get-process -id $_.OwningProcess).ProcessName}}, @{Name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} | sort Remoteaddress -Descending | ft -wrap -autosize
+
+Get-NetUDPEndpoint | select local*,creationtime, remote* | ft -autosize
+```
+
+List active TCP connections and the executable responsible for them
+```powershell
+netstat -a -b
 ```
 
 ### Network Shares
 List the Network Shares:
 ```powershell
-Get-CimInstance -Class Win32_Share | tee net-shares.txt
+Get-CimInstance -Class Win32_Share
 ```
+
+### RDP
+List all active RDP sessions on the host:
+```powershell
+qwinsta
+```
+
+### SMB
+
+List SMB shares:
+```powershell
+Get-SmbConnection
+```
+
 
 ### Firewall
 Check the firewall configuration:
@@ -178,10 +219,27 @@ List the User Logon Startup Programs:
 ```
 
 ### Registry
-Enumerate Registry Key:
+Checks what programs are set to run at user logon (`Userinit`) and which shell (desktop environment) is set (`Shell`). 
 ```powershell
 $winlogonPath = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"; "Userinit: $((Get-ItemProperty -Path $winlogonPath -Name 'Userinit').Userinit)"; "Shell: $((Get-ItemProperty -Path $winlogonPath -Name 'Shell').Shell)"
-Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NetSh" | tee netsh-records.txt
+```
+
+Lists all configuration values under the `NetSh` registry key, which is network-related:
+```powershell
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NetSh"
+```
+
+List of application autostart configuration:
+```powershell
+Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Run"
+Get-ItemProperty -Path "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Run"
+Get-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" | Select-Object Shell
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" | Select-Object Userinit
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Windows" | Select-Object AppInit_DLLs
+// Services and Scheduled Tasks below
 ```
 
 ## Services, Scheduled Items, Processes
@@ -190,21 +248,51 @@ GUI application - Services: `services.msc`
 
 List services' creation information:
 ```powershell
-Get-WinEvent -FilterHashTable @{LogName='System';ID='7045'} | fl
-Get-WinEvent -FilterHashTable @{LogName='Security';ID='4697'} | fl
+Get-WinEvent -FilterHashTable @{LogName='System';ID='7045'} | fl # Service installed
+Get-WinEvent -FilterHashTable @{LogName='Security';ID='4697'} | fl # Service installed
+Get-WinEvent -Path 'logs.evtx' | Where-Object { $_.Id -eq 7045 } | fl # Service installed
+Get-WinEvent -Path 'logs.evtx' | Where-Object { $_.Id -eq 4697 } | fl # Service installed
 ```
 
-List the Current Running services:
+List the Current `Running Services`:
 ```powershell
-"Running Services:"; Get-CimInstance -ClassName Win32_Service | Where-Object { $_.State -eq "Running" } | Select-Object Name, DisplayName, State, StartMode, PathName, ProcessId | ft -AutoSize | tee services-active.txt
+Get-CimInstance -ClassName Win32_Service |
+Where-Object { $_.State -eq "Running" } |
+Select-Object Name, DisplayName, State, StartMode, PathName, ProcessId |
+Format-Table -AutoSize
 ```
 
-List the Idle services:
+List the `Non-Running`:
 ```powershell
-"Non-Running Services:"; Get-CimInstance -ClassName Win32_Service | Where-Object { $_.State -ne "Running" } | Select-Object @{Name='Name'; Expression={if ($_.Name.Length -gt 22) { "$($_.Name.Substring(0,19))..." } else { $_.Name }}}, @{Name='DisplayName'; Expression={if ($_.DisplayName.Length -gt 45) { "$($_.DisplayName.Substring(0,42))..." } else { $_.DisplayName }}}, State, StartMode, PathName, ProcessId | Format-Table -AutoSize | Tee-Object services-idle.txt
+Get-CimInstance -ClassName Win32_Service |
+Where-Object { $_.State -ne "Running" } |
+Select-Object Name, DisplayName, State, StartMode, PathName, ProcessId |
+Format-Table -AutoSize
 ```
 
-Listt services set to run automatically:
+List the `Stopped Services`:
+```powershell
+$services = Get-Service | Where-Object { $_.Status -eq "Stopped" -and $_.StartType -eq "Automatic" }
+
+foreach ($service in $services) {
+    $serviceName = $service.Name
+    $serviceDisplayName = $service.DisplayName
+    $serviceStatus = $service.Status
+
+    $serviceWMI = Get-WmiObject Win32_Service | Where-Object { $_.Name -eq $serviceName }
+    $servicePath = $serviceWMI.PathName
+    $serviceUser = $serviceWMI.StartName
+
+    Write-Host "Service Name: $serviceName"
+    Write-Host "Display Name: $serviceDisplayName"
+    Write-Host "Service Status: $serviceStatus"
+    Write-Host "Executable Path: $servicePath"
+    Write-Host "User Context: $serviceUser"
+    Write-Host ""
+}
+```
+
+List services set to run `Automatically`:
 ```powershell
 $services = Get-Service | Where-Object {$_.Status -eq "Running" -and $_.StartType -eq "Automatic"}
 
@@ -212,6 +300,7 @@ foreach ($service in $services) {
     $serviceName = $service.Name
     $serviceDisplayName = $service.DisplayName
     $serviceStatus = $service.Status
+
     $serviceWMI = (Get-WmiObject Win32_Service | Where-Object { $_.Name -eq $serviceName })
     $servicePath = $serviceWMI.PathName
     $serviceUser = $serviceWMI.StartName
@@ -253,18 +342,51 @@ foreach ($service in $services) {
 ### Scheduled Tasks and Scheduled Jobs
 GUI application - Task Scheduler: `taskschd.msc`
 
-List tasks' creation information:
+List tasks' creation/activation/updatte information:
 ```powershell
-Get-WinEvent -FilterHashTable @{LogName='Security';ID='4698'} | fl
-Get-WinEvent -FilterHashTable @{LogName='Security';ID='4702'} | fl
+Get-WinEvent -FilterHashTable @{LogName='Security';ID='4698'} | fl # Scheduled task created
+Get-WinEvent -FilterHashTable @{LogName='Security';ID='4700'} | fl # Scheduled task enabled
+Get-WinEvent -FilterHashTable @{LogName='Security';ID='4702'} | fl # Scheduled task updated
+Get-WinEvent -Path 'logs.evtx' | Where-Object { $_.Id -eq 4698 } | fl # Scheduled task created
+Get-WinEvent -Path 'logs.evtx' | Where-Object { $_.Id -eq 4702 } | fl # Scheduled task enabled
+Get-WinEvent -Path 'logs.evtx' | Where-Object { $_.Id -eq 4702 } | fl # Scheduled task updated
 ```
 
 List scheduled tasks:
 ```powershell
-$tasks = Get-CimInstance -Namespace "Root/Microsoft/Windows/TaskScheduler" -ClassName MSFT_ScheduledTask; if ($tasks.Count -eq 0) { Write-Host "No scheduled tasks found."; exit } else { Write-Host "$($tasks.Count) scheduled tasks found." }; $results = @(); foreach ($task in $tasks) { foreach ($action in $task.Actions) { if ($action.PSObject.TypeNames[0] -eq 'Microsoft.Management.Infrastructure.CimInstance#Root/Microsoft/Windows/TaskScheduler/MSFT_TaskExecAction') { $results += [PSCustomObject]@{ TaskPath = $task.TaskPath.Substring(0, [Math]::Min(50, $task.TaskPath.Length)); TaskName = $task.TaskName.Substring(0, [Math]::Min(50, $task.TaskName.Length)); State = $task.State; Author = $task.Principal.UserId; Execute = $action.Execute } } } }; if ($results.Count -eq 0) { Write-Host "No tasks with 'MSFT_TaskExecAction' actions found." } else { $results | Format-Table -AutoSize | tee scheduled-tasks.txt }
+$tasks = Get-CimInstance -Namespace "Root/Microsoft/Windows/TaskScheduler" -ClassName MSFT_ScheduledTask
+
+if ($tasks.Count -eq 0) {
+    Write-Host "No scheduled tasks found."
+    exit
+} else {
+    Write-Host "$($tasks.Count) scheduled tasks found."
+}
+
+$results = @()
+
+foreach ($task in $tasks) {
+    foreach ($action in $task.Actions) {
+        if ($action.PSObject.TypeNames[0] -eq 'Microsoft.Management.Infrastructure.CimInstance#Root/Microsoft/Windows/TaskScheduler/MSFT_TaskExecAction') {
+            $results += [PSCustomObject]@{
+                TaskPath = $task.TaskPath
+                TaskName = $task.TaskName
+                State    = $task.State
+                Author   = $task.Principal.UserId
+                Execute  = $action.Execute
+            }
+        }
+    }
+}
+
+if ($results.Count -eq 0) {
+    Write-Host "No tasks with 'MSFT_TaskExecAction' actions found."
+} else {
+    $results | Format-Table -AutoSize
+}
 ```
 
-List scheduled tasks:
+List scheduled tasks with task information:
 ```powershell
 $tasks = Get-ScheduledTask | Where-Object {$_.Date —ne $null —and $_.State —ne "Disabled" —and $_.Actions.Execute —ne $null} | Sort-Object Date
 
@@ -287,12 +409,34 @@ foreach ($task in $tasks) {
     Write-Host ""
 }
 ```
+
 ### Processes
 List the Current Running Processes:
 ```powershell
-Get-WmiObject -Class Win32_Process | ForEach-Object {$owner = $_.GetOwner(); [PSCustomObject]@{Name=$_.Name; PID=$_.ProcessId; P_PID=$_.ParentProcessId; User="$($owner.User)"; CommandLine=if ($_.CommandLine.Length -le 60) { $_.CommandLine } else { $_.CommandLine.Substring(0, 60) + "..." }; Path=$_.Path}} | ft -AutoSize | tee process-summary.txt
+Get-WmiObject -Class Win32_Process | ForEach-Object {
+    $owner = $_.GetOwner()
+    [PSCustomObject]@{
+        Name        = $_.Name
+        PID         = $_.ProcessId
+        P_PID       = $_.ParentProcessId
+        User        = "$($owner.User)"
+        CommandLine = $_.CommandLine
+        Path        = $_.Path
+    }
+} | Format-Table -AutoSize
 ```
 
+### System Resource Usage Monitor (SRUM)
+The `SRUM` (`C:\Windows\System32\sru\SRUDB.dat`) is a Windows feature that tracks the last 30 to 60 days of resource usage, such as:
+- Application and service activity
+- Network activity, such as packets sent and received
+- User activity (I.e. launching services or processes).
+
+SRUM can be extracted by Kape and processed by [SRUM Dump](https://github.com/MarkBaggett/srum-dump):
+```powershell
+kape.exe --tsource C:\Windows\System32\sru --tdest C:\Users\CMNatic\Desktop\SRUM --tflush --mdest C:\Users\CMNatic\Desktop\MODULE --mflush --module SRUMDump --target SRUM
+srum-dump.exe
+```
 
 ## Files and Directories
 ### Information about Program or File
@@ -304,40 +448,26 @@ Get-Item -Path "C:\path\to\file.exe" | select *
 ### Directories
 Details of the Temp Folders:
 ```powershell
-Get-ChildItem -Path "C:\Users" -Force | Where-Object { $_.PSIsContainer } | ForEach-Object { Get-ChildItem -Path "$($_.FullName)\AppData\Local\Temp" -Recurse -Force -ErrorAction SilentlyContinue | Select-Object @{Name='User';Expression={$_.FullName.Split('\')[2]}}, FullName, Name, Extension } | ft -AutoSize | tee temp-folders.txt
+Get-ChildItem -Path "C:\Users" -Force | 
+    Where-Object { $_.PSIsContainer } | 
+    ForEach-Object {
+        Get-ChildItem -Path "$($_.FullName)\AppData\Local\Temp" -Recurse -Force -ErrorAction SilentlyContinue | 
+            Select-Object @{
+                Name       = 'User'
+                Expression = { $_.FullName.Split('\')[2] }
+            }, FullName, Name, Extension
+    } | 
+    Format-Table -AutoSize
 ```
 
 List the Disk Volumes of the System:
 ```powershell
-Get-CimInstance -ClassName Win32_Volume | ft -AutoSize DriveLetter, Label, FileSystem, Capacity, FreeSpace | tee disc-volumes.txt
+Get-CimInstance -ClassName Win32_Volume | ft -AutoSize DriveLetter, Label, FileSystem, Capacity, FreeSpace
 ```
 
 List contents of `Temp` directory for a given user:
 ```powershell
 Get-ChildItem -Path "C:\Users\Default\AppData\Local\Temp" -File -Force -Recurse
-```
-
-## Windows Event Logs
-GUI application - Windows Event Viewer: `eventvwr.msc`
-
-Sysmon Logs:
-```
-Applications and Services Logs/Microsoft/Windows/Sysmon/Operational
-```
-
-Windows Defender Logs:
-```
-Applications and Services Logs/Microsoft/Windows/Windows Defender/Operational
-```
-
-RDP Logs:
-```
-Applications and Services Logs/Microsoft/Windows/Terminal-Services-RemoteConnectionManager/Operational
-```
-
-User Artefacts in Authentication Protocols:
-```
-Windows Logs/Security
 ```
 
 ## Browser forensincs
@@ -359,7 +489,7 @@ ls C:\Users\ | foreach {ls "C:\Users\$_\AppData\Local\Google\Chrome\User Data\De
 
 List browser extensions:
 ```powershell
-ls 'C:\Users\mike.myers\AppData\Local\Google\Chrome\User Data\Default\Extensions\'
+ls C:\Users\ | ForEach-Object { ls "C:\Users\$($_.Name)\AppData\Local\Google\Chrome\User Data\Default\Extensions" -Directory -ErrorAction SilentlyContinue }
 ```
 
 Databases below can be viewed in DB Browser for SQLite\
@@ -368,7 +498,7 @@ Saved credentials by browser can be found at: `Login Data`
 
 ### Microsoft Edge
 List location of Microsoft Edge artefacts:
-```powershhell
+```powershell
 ls C:\Users\ | foreach {ls "C:\Users\$_\AppData\Local\Microsoft\Edge\User Data\Default" 2>$null | findstr Directory}
 ```
 
@@ -377,6 +507,11 @@ IE/Edge history includes browsing history and opened files by browser (`file://*
 C:\Users\<username>\AppData\Local\Microsoft\Windows\WebCache\WebCacheV*.dat
 ```
 
+Databases below can be viewed in DB Browser for SQLite\
+Browsing history can be found at: `History`
+Saved credentials by browser can be found at: `Login Data`
+
+### Browser artefacts analysis via Hindsight
 Analysis can be simplified by using [Hindsight](https://github.com/obsidianforensics/hindsight). In order to use this tool:
 - Run it `hindsight_gui.exe`
 - Open `http://localhost:8080/`
@@ -389,7 +524,6 @@ SELECT timestamp,url,title,visit_duration,visit_count,typed_count FROM 'timeline
 SELECT timestamp,url,title,value FROM timeline WHERE type = 'download'
 SELECT type,origin,key,value FROM 'storage'
 ```
-
 
 ## Office applications forensics
 ### Outlook
@@ -481,7 +615,6 @@ ls C:\Users\ | foreach {ls "C:\Users\$_\Appdata\Local\Microsoft\OneDrive\logs\Bu
 Important files:
 - `SyncEngine.odl` - Contains all operations performed, including the information of each file processed. 
 - `SyncDiagnostics.log` - A log file that contains the diagnostic information related to the synchronisation process of OneDrive.
-
 
 `ODL` (Object Description Language) files are used primarily in Microsoft development environments to define COM (Component Object Model) interfaces. These file can by analysed using [OneDriveExplorer](https://github.com/Beercow/OneDriveExplorer).
 

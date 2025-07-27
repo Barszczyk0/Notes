@@ -6,15 +6,17 @@
 
 ```
 MFTECmd.exe -f <path-to-$MFT> --csv ..\Output\ --csvf MFT.csv
+Output columns:
 EntryNumber, SequenceNumber, InUse, ParentEntryNumber, ParentSequenceNumber, ParentPath, FileName, Extension, FileSize, ReferenceCount, ReparseTarget, IsDirectory, HasAds, IsAds, SI<FN, uSecZeros, Copied, SiFlags, NameType, Created0x10, Created0x30, LastModified0x10, LastModified0x30, LastRecordChange0x10, LastRecordChange0x30, LastAccess0x10, LastAccess0x30, UpdateSequenceNumber, LogfileSequenceNumber, SecurityId, ObjectIdFileDroid, LoggedUtilStream, ZoneIdContents
 
 MFTECmd.exe -f <path-to-$I30> --csv ..\Output\ --csvf I30.csv
+Output columns:
 Offset, FromSlack, SelfMftEntry, SelfMftSequence, FileName, Flags, NameType, ParentMftEntry, ParentMftSequence, CreatedOn, ContentModifiedOn, RecordModifiedOn, LastAccessedOn, PhysicalSize, LogicalSize, SourceFile
 
 MFTECmd.exe -f <path-to-$J> --csv ..\Output\ --csvf USNJrnl.csv
+Output columns:
 Name, Extension, EntryNumber, SequenceNumber, ParentEntryNumber, ParentSequenceNumber, ParentPath, UpdateSequenceNumber, UpdateTimestamp, UpdateReasons, FileAttributes, OffsetToData, SourceFile
 ```
-
 
 ## Forensic analysis of NTFS
 NTFS (New Technology File System) features:

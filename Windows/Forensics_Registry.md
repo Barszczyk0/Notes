@@ -134,6 +134,7 @@ Command:
 PECmd.exe -f <path-to-Prefetch-files> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 PECmd.exe -d <path-to-Prefetch-directory> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 
+Output columns:
 Note, SourceFilename, SourceCreated, SourceModified, SourceAccessed, ExecutableName, Hash, Size, Version, RunCount, LastRun, PreviousRun0, PreviousRun1, PreviousRun2, PreviousRun3, PreviousRun4, PreviousRun5, PreviousRun6, Volume0Name, Volume0Serial, Volume0Created, Volume1Name, Volume1Serial, Volume1Created, Directories, FilesLoaded, ParsingError
 ```
 
@@ -146,8 +147,11 @@ C:\Users\<username>\AppData\Local\ConnectedDevicesPlatform\{randomfolder}\Activi
 ```
 Command:
 ```
-WxTCmd.exe -f <path-to-Timeline-file> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
-WxTCmd.exe -d <path-to-Timeline-directory> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
+WxTCmd.exe -f <path-to-Timeline-file> --csv <directory-to-save-csv> 
+
+Output columsn:
+Activity: Id, ActivityTypeOrg, ActivityType, Executable, DisplayText, ContentInfo, Payload, ClipboardPayload, StartTime, EndTime, Duration, LastModifiedTime, LastModifiedOnClient, OriginalLastModifiedOnClient, ExpirationTime, CreatedInCloud, IsLocalOnly, ETag, PackageIdHash, PlatformDeviceId, DevicePlatform, TimeZone
+Activity Package: Id, Platform, Name, AdditionalInformation, Expires
 ```
 
 ### JLECmd
@@ -163,6 +167,10 @@ Command:
 ```
 JLECmd.exe -f <path-to-Jumplist-file> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 JLECmd.exe -d <path-to-Jumplist-directory> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
+
+Output columns:
+AutomaticDestinations: SourceFile, SourceCreated, SourceModified, SourceAccessed, AppId, AppIdDescription, HasSps, DestListVersion, LastUsedEntryNumber, MRU, EntryNumber, CreationTime, LastModified, Hostname, MacAddress, Path, InteractionCount, PinStatus, FileBirthDroid, FileDroid, VolumeBirthDroid, VolumeDroid, TargetCreated, TargetModified, TargetAccessed, FileSize, RelativePath, WorkingDirectory, FileAttributes, HeaderFlags, DriveType, VolumeSerialNumber, VolumeLabel, LocalPath, CommonPath, TargetIDAbsolutePath, TargetMFTEntryNumber, TargetMFTSequenceNumber, MachineID, MachineMACAddress, TrackerCreatedOn, ExtraBlocksPresent, Arguments, Notes
+CustomDestinations: SourceFile, SourceCreated, SourceModified, SourceAccessed, AppId, AppIdDescription, EntryName, TargetCreated, TargetModified, TargetAccessed, FileSize, RelativePath, WorkingDirectory, FileAttributes, HeaderFlags, DriveType, VolumeSerialNumber, VolumeLabel, LocalPath, CommonPath, TargetIDAbsolutePath, TargetMFTEntryNumber, TargetMFTSequenceNumber, MachineID, MachineMACAddress, TrackerCreatedOn, ExtraBlocksPresent, Arguments
 ```
 
 ### LECmd
@@ -179,6 +187,7 @@ Comand:
 LECmd.exe -f <path-to-shortcut-files> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 LECmd.exe -d <path-to-shortcut-directory> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 
+Output columns:
 SourceFile, SourceCreated, SourceModified, SourceAccessed, TargetCreated, TargetModified, TargetAccessed, FileSize, RelativePath, WorkingDirectory, FileAttributes, HeaderFlags, DriveType, VolumeSerialNumber, VolumeLabel, LocalPath, NetworkPath, CommonPath, Arguments, TargetIDAbsolutePath, TargetMFTEntryNumber, TargetMFTSequenceNumber, MachineID, MachineMACAddress, MACVendor, TrackerCreatedOn, ExtraBlocksPresent
 ```
 
@@ -193,7 +202,7 @@ Command:
 ```
 AppCompatCacheParser.exe -f <path-to-Amcache-hive> --csv <directory-to-save-csv> --csvf <file-to-save-csv>
 
-Outputs:
+Output columns:
 AmCache_DeviceContainers - KeyName,KeyLastWriteTimestamp,Categories,DiscoveryMethod,FriendlyName,Icon,IsActive,IsConnected,IsMachineContainer,IsNetworked,IsPaired,Manufacturer,ModelId,ModelName,ModelNumber,PrimaryCategory,State
 AmCache_DevicePnps       - KeyName,KeyLastWriteTimestamp,BusReportedDescription,Class,ClassGuid,Compid,ContainerId,Description,DriverId,DriverPackageStrongName,DriverName,DriverVerDate,DriverVerVersion,Enumerator,HWID,Inf,InstallState,Manufacturer,MatchingId,Model,ParentId,ProblemCode,Provider,Service,Stackid
 AmCache_DriveBinaries    - KeyName,KeyLastWriteTimestamp,DriverTimeStamp,DriverLastWriteTime,DriverName,DriverInBox,DriverIsKernelMode,DriverSigned,DriverCheckSum,DriverCompany,DriverId,DriverPackageStrongName,DriverType,DriverVersion,ImageSize,Inf,Product,ProductVersion,Service,WdfVersion
