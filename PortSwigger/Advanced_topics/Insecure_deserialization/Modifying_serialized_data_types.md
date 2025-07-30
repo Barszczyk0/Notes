@@ -1,11 +1,14 @@
 # Modifying serialized data types
 # Objective
-This lab uses a serialization-based session mechanism and is vulnerable to authentication bypass as a result. To solve the lab, edit the serialized object in the session cookie to access the `administrator` account. Then, delete the user `carlos`.
+This lab uses a serialization-based session mechanism and is vulnerable to authentication bypass as a result. 
+
+To solve the lab, edit the serialized object in the session cookie to access the `administrator` account. Then, delete the user `carlos`.
+
 You can log in to your own account using the following credentials: `wiener:peter`
 
 # Solution
 ## Analysis
-The session cookie on this webiste holds serialized data:
+The session cookie on this webiste holds serialized data.
 |![](Images/image-4.png)|
 |:--:| 
 | *Session cookie* |
