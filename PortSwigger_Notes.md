@@ -170,7 +170,12 @@
 ## Insecure deserialization
 - [Modifying serialized objects](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_objects.md)
 - [Modifying serialized data types](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_data_types.md)
- 
+- [Using application functionality to exploit insecure deserialization](/PortSwigger/Advanced_topics/Insecure_deserialization/Using_application_functionality_to_exploit_insecure_deserialization.md)
+- [Arbitrary object injection in PHP](/PortSwigger/Advanced_topics/Insecure_deserialization/Arbitrary_object_injection_in_PHP.md)
+- [Exploiting Java deserialization with Apache Commons](/PortSwigger/Advanced_topics/Insecure_deserialization/Exploiting_Java_deserialization_with_Apache_Commons.md)
+- [Exploiting PHP deserialization with a pre-built gadget chain](/PortSwigger/Advanced_topics/Insecure_deserialization/Exploiting_PHP_deserialization_with_a_pre-built_gadget_chain.md)
+- [Exploiting Ruby deserialization using a documented gadget chain](/PortSwigger/Advanced_topics/Insecure_deserialization/Exploiting_Ruby_deserialization_using_a_documented_gadget_chain.md)
+
 ## Web LLM attacks
 - [Exploiting LLM APIs with excessive agency](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_LLM_APIs_with_excessive_agency.md)
 - [Exploiting vulnerabilities in LLM APIs](/PortSwigger/Advanced_topics/Web_LLM_attacks/Exploiting_vulnerabilities_in_LLM_APIs.md)
