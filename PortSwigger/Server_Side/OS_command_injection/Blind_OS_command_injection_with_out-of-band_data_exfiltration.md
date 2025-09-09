@@ -7,4 +7,9 @@ The application executes a shell command containing the user-supplied details. T
 To solve the lab, execute the whoami command and exfiltrate the output via a DNS query to Burp Collaborator. You will need to enter the name of the current user to complete the lab.
 
 # Solution
-Solution of this lab requires BurpCollaborator
+
+|![](Images/image-10.png)|
+|:--:| 
+| *Blind OS command injection with out-of-band data exfiltration* |
+|![](Images/image-11.png)|
+| *DNS query* |

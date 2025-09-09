@@ -7,5 +7,7 @@ The application executes a shell command containing the user-supplied details. T
 To solve the lab, exploit the blind OS command injection vulnerability to issue a DNS lookup to Burp Collaborator. 
 
 # Solution
-Solution of this lab requires BurpCollaborator
 
+|![](Images/image-9.png)|
+|:--:| 
+| *Blind OS command injection with out-of-band interaction* |

@@ -13,8 +13,8 @@ To solve the lab, exploit the blind OS command injection vulnerability to cause 
 
 |![](Images/image-3.png)|
 |:--:| 
-| *Time delay using ping in message parameter* |
+| *Blind OS command injection - Time delay using ping in message parameter* |
 |![](Images/image-4.png)|
-| *Time delay using ping in message parameter* |
+| *Blind OS command injection - Time delay using ping in message parameter* |
 |![](Images/image-5.png)|
-| *Time delay using ping in message parameter* |
+| *Blind OS command injection - Time delay using ping in message parameter* |
