@@ -45,13 +45,6 @@
 - [Blind OS command injection with out-of-band interaction](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_interaction.md)
 - [Blind OS command injection with out-of-band data exfiltration](/PortSwigger/Server_Side/OS_command_injection/Blind_OS_command_injection_with_out-of-band_data_exfiltration.md)
 
-## Information disclosure vulnerabilities
-- [Information disclosure in error messages](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_error_messages.md)
-- [Information disclosure on debug page](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_on_debug_page.md)
-- [Source code disclosure via backup files](/PortSwigger/Server_Side/Information_disclosure/Source_code_disclosure_via_backup_files.md)
-- [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
-- [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
-
 ## Business logic vulnerabilities
 - [Excessive trust in client-side controls](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Excessive_trust_in_client-side_controls.md)
 - [High-level logic vulnerability](/PortSwigger/Server_Side/Business_logic_vulnerabilities/High-level_logic_vulnerability.md)
@@ -59,6 +52,13 @@
 - [Flawed enforcement of business rules](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Flawed_enforcement_of_business_rules.md)
 - [Low-level logic flaw](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Low-level_logic_flaw.md)
 - [Inconsistent handling of exceptional input](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Inconsistent_handling_of_exceptional_input.md)
+
+## Information disclosure vulnerabilities
+- [Information disclosure in error messages](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_error_messages.md)
+- [Information disclosure on debug page](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_on_debug_page.md)
+- [Source code disclosure via backup files](/PortSwigger/Server_Side/Information_disclosure/Source_code_disclosure_via_backup_files.md)
+- [Authentication bypass via information disclosure](/PortSwigger/Server_Side/Information_disclosure/Authentication_bypass_via_information_disclosure.md)
+- [Information disclosure in version control history](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_version_control_history.md)
 
 ## Access control
 - [Unprotected admin functionality](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality.md)
@@ -82,15 +82,22 @@
 - [Remote code execution via polyglot web shell upload](/PortSwigger/Server_Side/File_upload_vulnerabilities/Remote_code_execution_via_polyglot_web_shell_upload.md)
 - [Web shell upload via race condition](/PortSwigger/Server_Side/File_upload_vulnerabilities/Web_shell_upload_via_race_condition.md)
 
-## Server-side request forgery
-- [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
-- [Basic SSRF against another back-end system](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_another_back-end_system.md)
-
 ## Race conditions
 - [Limit overrun race conditions](/PortSwigger/Server_Side/Race_Conditions/Limit_overrun_race_conditions.md)
 - [Bypassing rate limits via race conditions](/PortSwigger/Server_Side/Race_Conditions/Bypassing_rate_limits_via_race_conditions.md)
 - [Multi-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Multi-endpoint_race_conditions.md)
 - [Single-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Single-endpoint_race_conditions.md)
+
+## Server-side request forgery
+- [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
+- [Basic SSRF against another back-end system](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_another_back-end_system.md)
+- [Blind SSRF with out-of-band detection](/PortSwigger/Server_Side/SSRF/Blind_SSRF_with_out-of-band_detection.md)
+- [SSRF with blacklist-based input filter](/PortSwigger/Server_Side/SSRF/SSRF_with_blacklist-based_input_filter.md)
+- [SSRF with filter bypass via open redirection vulnerability](/PortSwigger/Server_Side/SSRF/SSRF_with_filter_bypass_via_open_redirection_vulnerability.md)
+
+## XML external entity (XXE) injection
+- [Exploiting XXE using external entities to retrieve files](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_using_external_entities_to_retrieve_files.md)
+- [Exploiting XXE to perform SSRF attacks](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_to_perform_SSRF_attacks.md)
 
 ## NoSQL injection
 - [Detecting NoSQL injection](/PortSwigger/Server_Side/NoSQL_injection/Detecting_NoSQL_injection.md)
@@ -162,10 +169,6 @@
 - [CORS vulnerability with trusted null origin](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_trusted_null_origin.md)
 - [CORS vulnerability with trusted insecure protocols](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_trusted_insecure_protocols.md)
 
-## XML external entity (XXE) injection
-- [Exploiting XXE using external entities to retrieve files](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_using_external_entities_to_retrieve_files.md)
-- [Exploiting XXE to perform SSRF attacks](/PortSwigger/Server_Side/XXE_Injection/Exploiting_XXE_to_perform_SSRF_attacks.md)
-
 # Advanced Topics
 ## Insecure deserialization
 - [Modifying serialized objects](/PortSwigger/Advanced_topics/Insecure_deserialization/Modifying_serialized_objects.md)
@@ -197,6 +200,18 @@
 - [Server-side template injection in an unknown language with a documented exploit](/PortSwigger/Advanced_topics/Server-side_template_injection/Server_side_template_injection_in_an_unknown_language_with_a_documented_exploit.md)
 - [Server-side template injection with information disclosure via user-supplied objects](/PortSwigger/Advanced_topics/Server-side_template_injection/Server_side_template_injection_with_information_disclosure_via_user-supplied_objects.md)
 
+## Web cache poisoning
+- [Web cache poisoning with an unkeyed header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_header.md)
+- [Web cache poisoning with an unkeyed cookie](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_cookie.md)
+- [Web cache poisoning with multiple headers](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_multiple_headers.md)
+- [Targeted web cache poisoning using an unknown header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Targeted_web_cache_poisoning_using_an_unknown_header.md)
+- [Web cache poisoning via an unkeyed query string](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_string.md)
+- [Web cache poisoning via an unkeyed query parameter](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_parameter.md)
+
+## HTTP Host header attacks
+- [Basic password reset poisoning](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Basic_password_reset_poisoning.md)
+- [Host header authentication bypass](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Host_header_authentication_bypass.md)
+
 ## HTTP request smuggling
 - [HTTP request smuggling - Cheat Sheet](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Request_smuggling_cheat_sheet.md)
 - [HTTP request smuggling, confirming a CL.TE vulnerability via differential responses](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_confirming_a_CL.TE_vulnerability_via_differential_responses.md)
@@ -215,17 +230,8 @@
 - [HTTP request smuggling, basic TE.CL vulnerability](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_basic_TE.CL_vulnerability.md)
 - [HTTP request smuggling, obfuscating the TE header](/PortSwigger/Advanced_topics/HTTP_request_smuggling/HTTP_request_smuggling,_obfuscating_the_TE_header.md)
 
-## Web cache poisoning
-- [Web cache poisoning with an unkeyed header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_header.md)
-- [Web cache poisoning with an unkeyed cookie](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_an_unkeyed_cookie.md)
-- [Web cache poisoning with multiple headers](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_with_multiple_headers.md)
-- [Targeted web cache poisoning using an unknown header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Targeted_web_cache_poisoning_using_an_unknown_header.md)
-- [Web cache poisoning via an unkeyed query string](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_string.md)
-- [Web cache poisoning via an unkeyed query parameter](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_parameter.md)
-
-## HTTP Host header attacks
-- [Basic password reset poisoning](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Basic_password_reset_poisoning.md)
-- [Host header authentication bypass](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Host_header_authentication_bypass.md)
+## OAuth authentication
+- [Authentication bypass via OAuth implicit flow](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/Authentication_bypass_via_OAuth_implicit_flow.md)
 
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
@@ -236,3 +242,8 @@
 - [JWT authentication bypass via kid header path traversal](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_kid_header_path_traversal.md)
 - [JWT authentication bypass via algorithm confusion](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion.md)
 - [JWT authentication bypass via algorithm confusion with no exposed key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion_with_no_exposed_key.md)
+
+## Essential skills 
+- [Discovering vulnerabilities quickly with targeted scanning](/PortSwigger/Advanced_topics/Essential%20skills/Discovering_vulnerabilities_quickly_with_targeted_scanning.md)
+- [Scanning non-standard data structures](/PortSwigger/Advanced_topics/Essential%20skills/Scanning_non-standard_data_structures.md)
+
