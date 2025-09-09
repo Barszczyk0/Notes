@@ -6,7 +6,7 @@ To solve the lab, use the stock check functionality to scan the internal 192.168
 
 # Solution
 ## IP brute force
-In order to find correct admin interface last digit in IP address must be brute-forced.
+Website has `Check stock` functionality. In order to find correct admin interface last digit in IP address must be brute-forced.
 |![](Images/image-6.png)|
 |:--:| 
 | *Modification of request* |

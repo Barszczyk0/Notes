@@ -6,7 +6,7 @@ To solve the lab, change the stock check URL to access the admin interface at `h
 
 # Solution
 ## Analysis
-By changing `stockAPI` value it is possible to reach `/admin` page.
+Website has `Check stock` functionality. By changing `stockAPI` value it is possible to reach `/admin` page.
 
 |![](Images/image.png)|
 |:--:| 
