@@ -1,6 +1,7 @@
 # DOM XSS using web messages
 # Objective
-This lab demonstrates a simple web message vulnerability. To solve this lab, use the exploit server to post a message to the target site that causes the `print()` function to be called.
+This lab demonstrates a simple web message vulnerability.\
+To solve this lab, use the exploit server to post a message to the target site that causes the `print()` function to be called.
 
 # Solution
 ## Analysis
