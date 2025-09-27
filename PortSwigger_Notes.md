@@ -27,6 +27,12 @@
 - [Username enumeration via response timing](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_response_timing.md)
 - [Broken brute-force protection, IP block](/PortSwigger/Server_Side/Authentication/Broken_brute-force_protection,_IP_block.md)
 - [Username enumeration via account lock](/PortSwigger/Server_Side/Authentication/Username_enumeration_via_account_lock.md)
+- [2FA broken logic](/PortSwigger/Server_Side/Authentication/2FA_broken_logic.md)
+- [Brute-forcing a stay-logged-in cookie](/PortSwigger/Server_Side/Authentication/Brute-forcing_a_stay-logged-in_cookie.md)
+- [Offline password cracking](/PortSwigger/Server_Side/Authentication/Offline_password_cracking.md)
+- [Password reset poisoning via middleware](/PortSwigger/Server_Side/Authentication/Password_reset_poisoning_via_middleware.md)
+- [Password brute-force via password change](/PortSwigger/Server_Side/Authentication/Password_brute-force_via_password_change.md)
+
 
 ## Path Traversal
 - [File path traversal, simple case](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_simple_case.md)
@@ -35,8 +41,7 @@
 - [File path traversal, traversal sequences stripped with superfluous URL-decode](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_traversal_sequences_stripped_with_superfluous_URL-decode.md)
 - [File path traversal, validation of start of path](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_start_of-path.md)
 - [File path traversal, validation of file extension with null byte bypass](/PortSwigger/Server_Side/Path_Traversal/File_path_traversal,_validation_of_file_extension_with_null_byte_bypass.md)
-- [2FA broken logic](/PortSwigger/Server_Side/Authentication/2FA_broken_logic.md)
-- [Brute-forcing a stay-logged-in cookie](/PortSwigger/Server_Side/Authentication/Brute-forcing_a_stay-logged-in_cookie.md)
+
 
 ## OS command injection
 - [OS command injection, simple case](/PortSwigger/Server_Side/OS_command_injection/OS_command_injection,_simple_case.md)
@@ -171,6 +176,12 @@
 - [CSRF where token is not tied to user session](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_not_tied_to_user_session.md)
 - [CSRF where token is tied to non-session cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_tied_to_non-session_cookie.md)
 - [CSRF where token is duplicated in cookie](/PortSwigger/Client_Side/CSRF/CSRF_where_token_is_duplicated_in_cookie.md)
+- [SameSite Lax bypass via method override](/PortSwigger/Client_Side/CSRF/SameSite_Lax_bypass_via_method_override.md)
+- [SameSite Strict bypass via client-side redirect](/PortSwigger/Client_Side/CSRF/SameSite_Strict_bypass_via_client-side_redirect.md)
+- [SameSite Strict bypass via sibling domain](/PortSwigger/Client_Side/CSRF/SameSite_Strict_bypass_via_sibling_domain.md)
+- [SameSite Lax bypass via cookie refresh](/PortSwigger/Client_Side/CSRF/SameSite_Lax_bypass_via_cookie_refresh.md)
+- [CSRF where Referer validation depends on header being present](/PortSwigger/Client_Side/CSRF/CSRF_where_Referer_validation_depends_on_header_being_present.md)
+- [CSRF with broken Referer validation](/PortSwigger/Client_Side/CSRF/CSRF_with_broken_Referer_validation.md)
 
 ## Cross-origin resource sharing (CORS)
 - [CORS vulnerability with basic origin reflection](/PortSwigger/Client_Side/CORS/CORS_vulnerability_with_basic_origin_reflection.md)
@@ -188,6 +199,8 @@
 - [DOM XSS using web messages](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM_XSS_using_web_messages.md)
 - [DOM XSS using web messages and a JavaScript URL](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM_XSS_using_web_messages_and_a_JavaScript_URL.md)
 - [DOM-based open redirection](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM-based_open_redirection.md)
+- [DOM XSS using web messages and JSON.parse](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM_XSS_using_web_messages_and_JSON_parse.md)
+- [DOM-based cookie manipulation](/PortSwigger/Client_Side/DOM-based_vulnerabilities/DOM-based_cookie_manipulation.md)
 
 ## WebSockets
 - [Manipulating WebSocket messages to exploit vulnerabilities](/PortSwigger/Client_Side/WebSockets/Manipulating_WebSocket_messages_to_exploit_vulnerabilities.md)
