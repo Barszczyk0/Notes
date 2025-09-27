@@ -13,7 +13,7 @@ Even though the website have `csrf` token it might not handle correctly differen
 | *Test of change email functionality - CSRF token is preset* |
 
 
-## CSRF Exploit
+## Exploitation
 In order to solve the lab the following steps must be completed:
 - Craft correct payload (below) - use `GET` method in request
 - `Store` it
@@ -32,4 +32,6 @@ All users have to have different emails addresses.
 </script>
 ```
 
-![](Images/image-3.png)
+|![](Images/image-3.png)|
+|:--:| 
+| *Exploit server configuration* |

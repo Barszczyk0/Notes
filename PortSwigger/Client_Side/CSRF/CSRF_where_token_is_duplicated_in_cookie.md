@@ -23,7 +23,7 @@ Moreover, latest search is stored as cookie value in user browser - search term 
 | *Cookie - Latest search term* |
 
 
-## CSRF Exploit
+## Exploitation
 In order to solve the lab the following steps must be completed:
 - Craft correct payload (below)
   - Create a URL to inject your `csrf` cookie into the victim's browser
@@ -49,4 +49,4 @@ URL encoded characters `%0d%0a` are `\r\n` (carriage return and line feed). They
 |![](Images/image-20.png)|
 | *URL decoded payload* |
 |![](Images/image-18.png)|
-| *Final payload* |
+| *Exploit server configuration* |

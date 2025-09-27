@@ -12,7 +12,7 @@ Even though the website have `csrf` token website might not handle correctly the
 |:--:| 
 | *Test of change email functionality* |
 
-## CSRF Exploit
+## Exploitation
 In order to solve the lab the following steps must be completed:
 - Craft correct payload (below) - Craft POST request to `/my-account/change-email` without any `csrf` token
 - `Store` it
@@ -31,4 +31,6 @@ All users have to have different emails addresses.
 </script>
 ```
 
-![](Images/image-5.png)
+|![](Images/image-5.png)|
+|:--:| 
+| *Exploit server configuration* |

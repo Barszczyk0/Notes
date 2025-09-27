@@ -25,8 +25,7 @@ Even though the website have `csrf` token website might not assosiate `csrf` tok
 | *Change email request with wiener's csrf token* |
 
 
-
-## CSRF Exploit
+## Exploitation
 In order to solve the lab the following steps must be completed:
 - Craft correct payload (below) - Craft POST request with validm, unused `csrf` token, that is not tied to user session
 - `Store` it
@@ -50,4 +49,4 @@ All users have to have different emails addresses.
 |:--:| 
 | *Copy the csrf token of valid change email request* |
 |![](Images/image-11.png)|
-| *Deliver payload to victim* |
+| *Exploit server configuration* |
