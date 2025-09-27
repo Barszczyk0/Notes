@@ -14,7 +14,7 @@ Every time user establishes websocket connection data from all previous interact
 | *WebSocket handshake* |
 
 ## Exploitation
-Attacker can steal data send via websocket by using configuration below - user opens website, websocket connection is established automattically (no CSRF protectionns), every websocket responnse from server is sent to attacker domain.
+Attacker can steal data send via websocket by using configuration below - user opens website, websocket connection is established automattically (no CSRF protections), every websocket responnse from server is sent to attacker domain.
 
 Exploit server configuration:
 ```html
