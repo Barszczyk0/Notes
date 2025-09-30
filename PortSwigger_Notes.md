@@ -57,6 +57,11 @@
 - [Flawed enforcement of business rules](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Flawed_enforcement_of_business_rules.md)
 - [Low-level logic flaw](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Low-level_logic_flaw.md)
 - [Inconsistent handling of exceptional input](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Inconsistent_handling_of_exceptional_input.md)
+- [Weak isolation on dual-use endpoint](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Weak_isolation_on_dual-use_endpoint.md)
+- [Insufficient workflow validation](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Insufficient_workflow_validation.md)
+- [Authentication bypass via flawed state machine](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Authentication_bypass_via_flawed_state_machine.md)
+- [Infinite money logic flaw](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Infinite_money_logic_flaw.md)
+- [Authentication bypass via encryption oracle](/PortSwigger/Server_Side/Business_logic_vulnerabilities/Authentication_bypass_via_encryption_oracle.md)
 
 ## Information disclosure vulnerabilities
 - [Information disclosure in error messages](/PortSwigger/Server_Side/Information_disclosure/Information_disclosure_in_error_messages.md)
