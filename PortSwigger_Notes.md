@@ -99,6 +99,7 @@
 - [Bypassing rate limits via race conditions](/PortSwigger/Server_Side/Race_Conditions/Bypassing_rate_limits_via_race_conditions.md)
 - [Multi-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Multi-endpoint_race_conditions.md)
 - [Single-endpoint race conditions](/PortSwigger/Server_Side/Race_Conditions/Single-endpoint_race_conditions.md)
+- [Exploiting time-sensitive vulnerabilities](/PortSwigger/Server_Side/Race_Conditions/Exploiting_time-sensitive_vulnerabilities.md)
 
 ## Server-side request forgery
 - [Basic SSRF against the local server](/PortSwigger/Server_Side/SSRF/Basic_SSRF_against_the_local_server.md)
@@ -261,6 +262,9 @@
 - [Targeted web cache poisoning using an unknown header](/PortSwigger/Advanced_topics/Web_cache_poisoning/Targeted_web_cache_poisoning_using_an_unknown_header.md)
 - [Web cache poisoning via an unkeyed query string](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_string.md)
 - [Web cache poisoning via an unkeyed query parameter](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_an_unkeyed_query_parameter.md)
+- [Parameter cloaking](/PortSwigger/Advanced_topics/Web_cache_poisoning/Parameter_cloaking.md)
+- [Web cache poisoning via a fat GET request](/PortSwigger/Advanced_topics/Web_cache_poisoning/Web_cache_poisoning_via_a_fat_GET_request.md)
+- [URL normalization](/PortSwigger/Advanced_topics/Web_cache_poisoning/URL_normalization.md)
 
 ## HTTP Host header attacks
 - [Basic password reset poisoning](/PortSwigger/Advanced_topics/HTTP_Host_header_attacks/Basic_password_reset_poisoning.md)
