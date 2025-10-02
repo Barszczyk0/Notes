@@ -18,5 +18,5 @@ The website allows to send `Fat GET` request to `/js/geolocate.js`. The paramete
 |![](Images/image-42.png)|
 |:--:| 
 | *Fat GET request* |
-|![](Images/image-42.png)|
+|![](Images/image-43.png)|
 | *Cache poisoning via fat GET request - payload is cached* |
