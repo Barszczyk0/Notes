@@ -305,6 +305,18 @@
 - [JWT authentication bypass via algorithm confusion](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion.md)
 - [JWT authentication bypass via algorithm confusion with no exposed key](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_algorithm_confusion_with_no_exposed_key.md)
 
+## Prototype pollution
+- [Client-side prototype pollution via browser APIs](/PortSwigger/Advanced_topics/Prototype_pollution/Client-side_prototype_pollution_via_browser_APIs.md)
+- [DOM XSS via client-side prototype pollution](/PortSwigger/Advanced_topics/Prototype_pollution/DOM_XSS_via_client-side_prototype_pollution.md)
+- [DOM XSS via an alternative prototype pollution vector](/PortSwigger/Advanced_topics/Prototype_pollution/DOM_XSS_via_an_alternative_prototype_pollution_vector.md)
+- [Client-side prototype pollution via flawed sanitization](/PortSwigger/Advanced_topics/Prototype_pollution/Client-side_prototype_pollution_via_flawed_sanitization.md)
+- [Client-side prototype pollution in third-party libraries](/PortSwigger/Advanced_topics/Prototype_pollution/Client-side_prototype_pollution_in_third-party_libraries.md)
+- [Privilege escalation via server-side prototype pollution](/PortSwigger/Advanced_topics/Prototype_pollution/Privilege_escalation_via_server-side_prototype_pollution.md)
+- [Detecting server-side prototype pollution without polluted property reflection](/PortSwigger/Advanced_topics/Prototype_pollution/Detecting_server-side_prototype_pollution_without_polluted_property_reflection.md)
+- [Bypassing flawed input filters for server-side prototype pollution](/PortSwigger/Advanced_topics/Prototype_pollution/Bypassing_flawed_input_filters_for_server-side_prototype_pollution.md)
+- [Remote code execution via server-side prototype pollution](/PortSwigger/Advanced_topics/Prototype_pollution/Remote_code_execution_via_server-side_prototype_pollution.md)
+- [Exfiltrating sensitive data via server-side prototype pollution](/PortSwigger/Advanced_topics/Prototype_pollution/Exfiltrating_sensitive_data_via_server-side_prototype_pollution.md)
+
 ## Essential skills 
 - [Discovering vulnerabilities quickly with targeted scanning](/PortSwigger/Advanced_topics/Essential%20skills/Discovering_vulnerabilities_quickly_with_targeted_scanning.md)
 - [Scanning non-standard data structures](/PortSwigger/Advanced_topics/Essential%20skills/Scanning_non-standard_data_structures.md)
