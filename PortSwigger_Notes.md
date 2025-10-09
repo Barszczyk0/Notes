@@ -294,6 +294,10 @@
 
 ## OAuth authentication
 - [Authentication bypass via OAuth implicit flow](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/Authentication_bypass_via_OAuth_implicit_flow.md)
+- [SSRF via OpenID dynamic client registration](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/SSRF_via_OpenID_dynamic_client_registration.md)
+- [Forced OAuth profile linking](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/Forced_OAuth_profile_linking.md)
+- [OAuth account hijacking via redirect_uri](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/OAuth_account_hijacking_via_redirect_uri.md)
+- [Stealing OAuth access tokens via an open redirect](/PortSwigger/Advanced_topics/OAuth_2.0_authentication_vulnerabilities/Stealing_OAuth_access_tokens_via_an_open_redirect.md)
 
 ## JWT
 - [JWT authentication bypass via unverified signature](/PortSwigger/Advanced_topics/JWT/JWT_authentication_bypass_via_unverified_signature.md)
