@@ -28,7 +28,7 @@ The following payloads can be used to test for potential server side prototype p
   "country": "UK",
   "sessionId": "jMHEAuCX6uUeZUs4ZoXMD59bYgjMhVnq",
   "__proto__": {
-    "json spaces": " "
+    "json spaces": 10
   }
 }
 ```
