@@ -174,6 +174,7 @@
 - [Exploiting cross-site scripting to steal cookies](/PortSwigger/Client_Side/XSS/Exploiting_cross-site_scripting_to_steal_cookies.md)
 - [Exploiting cross-site scripting to capture passwords](/PortSwigger/Client_Side/XSS/Exploiting_cross-site_scripting_to_capture_passwords.md)
 - [Exploiting XSS to perform CSRF](/PortSwigger/Client_Side/XSS/Exploiting_XSS_to_perform_CSRF.md)
+- [Reflected XSS protected by very strict CSP, with dangling markup attack](/PortSwigger/Client_Side/XSS/Reflected_XSS_protected_by_very_strict_CSP,_with_dangling_markup_attack.md)
 
 ## Cross-site request forgery (CSRF)
 - [CSRF vulnerability with no defenses](/PortSwigger/Client_Side/CSRF/CSRF_vulnerability_with_no_defenses.md)
