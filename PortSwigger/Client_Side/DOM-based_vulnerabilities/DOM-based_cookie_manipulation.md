@@ -24,7 +24,7 @@ Vulnerable code:
 ```
 
 ## Exploitation
-The following payload uses `window.location` sink to perform DOM-based XSS attack. If `src` URL fails, `iframe` will fallback to the second URL.
+The following payload uses `window.location` sink to perform DOM-based XSS attack. Request `/product?productId=1&'><script>print()</script>` poisons `lastViewedProduct` cookie with XSS payload. On the first iframe load, `window.x` is undefined, so the code sets the iframe `src` to the base target URL - XSS payload is loaded from cookie. `window.x = 1` prevents the redirection from happening again on subsequent loads.
 
 |![](Images/image-15.png)|
 |:--:| 
