@@ -24,6 +24,7 @@ By trying to order a large number o a certain product it is possible to overflow
 Max price value is `2 147 483 647` --- `log2(2 147 483 648) = 31`
 
 |![](Images/image-21.png)|
+|:--:| 
 | *Final result* |
 
 
