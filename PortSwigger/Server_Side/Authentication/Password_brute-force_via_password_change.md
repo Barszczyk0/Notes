@@ -27,4 +27,3 @@ Attacker can brute force user password by abusing change password funcionality. 
 | *Intruder configuration* |
 |![](Images/image-60.png)|
 | *Correct (old) victim's password* |
-![alt text](image.png)
