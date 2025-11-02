@@ -12,7 +12,7 @@ There is no `csrf` token (or any other `crsf` security measure) in `/my-account/
 | *Test of change email functionality* |
 |![](Images/image-54.png)|
 | *Modified Referer header - header is validated in change email reqeust* |
-|![](Images/image-54.png)|
+|![](Images/image-55.png)|
 | *Successful request without referer header* |
 
 ## Exploitation
