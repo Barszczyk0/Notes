@@ -246,7 +246,6 @@
 - [Finding a hidden GraphQL endpoint](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Finding_a_hidden_GraphQL_endpoint.md)
 - [Bypassing GraphQL brute force protections](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Bypassing_GraphQL_brute_force_protections.md)
 - [Performing CSRF exploits over GraphQL](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/Performing_CSRF_exploits_over_GraphQL.md)
-- [SameSite Lax bypass via method override](/PortSwigger/Client_Side/CSRF/SameSite_Lax_bypass_via_method_override.md)
 
 ## Server-side template injection
 - [Server-side template injection - Cheat Sheet](/PortSwigger/Advanced_topics/Server-side_template_injection/SSTI_cheat_cheet.md)
