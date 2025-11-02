@@ -6,7 +6,7 @@ To solve the lab, review the `ERB` documentation to find out how to execute arbi
 
 # Solution
 ## Analysis
-After clicking the first item, user receives information (message) that the selected item is out of stock. The description of this lab informs that there is a `EDB` template in use. The `message` parameter is vulnerable to Server-side template injection. 
+After clicking the first item, user receives information (message) that the selected item is out of stock. The description of this lab informs that there is a `ERB` template in use. The `message` parameter is vulnerable to Server-side template injection. 
 |![](Images/image.png)|
 |:--:| 
 | *First item is out of stock* |
