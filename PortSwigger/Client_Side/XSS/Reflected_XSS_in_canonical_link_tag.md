@@ -8,7 +8,7 @@ To assist with your exploit, you can assume that the simulated user will press t
 - `ALT+SHIFT+X`
 - `CTRL+ALT+X`
 - `Alt+X`
-- 
+
 # Solution
 ## Analysis
 Payload: `$ip/?customsearch=sth` is reflected in response from a server.

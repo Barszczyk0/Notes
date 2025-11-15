@@ -34,7 +34,7 @@ Payload: `<img src=0 onerror='alert()'>` returns error `"Tag is not allowed"`.
 |![](Images/image-51.png)|
 | Working events - for example `onresize` |
 
-### Brute forcing event
+### XSS Exploit
 Payload below is triggered when user changes the size of the browser window:
 ```
 <body onresize='print()'>
