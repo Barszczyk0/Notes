@@ -1,4 +1,4 @@
-# Volatile Memory Analysys
+# Volatile Memory Analysis
 
 `pagefile.sys` - extension of RAM
 `hiberfil.sys` - hibernation file
